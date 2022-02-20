@@ -33,7 +33,9 @@
 }
 
 .newsletter-form__message--success {
-  margin-top: 2rem;
+  margin-top: .9rem;
+  color: #FFFFFF; 
+  text-align: center;
 }
 
 @media screen and (min-width: 750px) {

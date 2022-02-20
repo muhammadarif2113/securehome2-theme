@@ -1705,11 +1705,11 @@ details[open] > .share-button__fallback {
 .field {
   position: relative;
   width: 100%;
-  display: flex;
+  /* display: flex; */
   transition: box-shadow var(--duration-short) ease;
 }
 
-.customer .field {
+.customer {
   display: flex;
 }
 

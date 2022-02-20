@@ -1,0 +1,121 @@
+
+  {%- assign featured_product = all_products[section.settings.featured_product_handle] -%} 
+
+  <div class="featured lazy featured-{{ section.settings.parallax-height }}" style="background: url({% if section.settings.img_product %}{{ section.settings.img_product | img_url: 'master' }}{% else %}https://via.placeholder.com/1200x800{% endif %}) 50% 70%;"> 
+     <div class="opacity-mask-{{ section.settings.opacity }} d-flex align-items-center"> 
+        <div class="container margin_60"> 
+           <div class="row  product-aligned-{{ section.settings.product_alignment }}"> 
+              <div class="column-one"  style="color: {{ section.settings.product_text_color }};"> 
+                 <h3 style="color: {{ section.settings.product_text_color }};">{{ featured_product.title }}</h3> 
+                 <p  style="color: {{ section.settings.product_text_color }};">{{ featured_product.description | truncate: 100 }}</p> 
+                 <div class="feat_text_block"> 
+                    <div class="price_box"> 
+                       <span class="new_price" style="color: {{ section.settings.product_text_color }};">{{ featured_product.variants.first.price | money }}</span> 
+                       {%- if featured_product.variants.first.compare_at_price > featured_product.variants.first.price -%} 
+                       <span class="old_price" style="color: {{ section.settings.product_text_color }};">{{ featured_product.variants.first.compare_at_price | money }}</span> 
+                       {%- endif -%} 
+                    </div> 
+                    <a class="btn" href="{{ featured_product.url }}" role="button">{{ section.settings.txt_button }}</a> 
+                 </div> 
+              </div> 
+           </div> 
+        </div> 
+     </div> 
+  </div> 
+  <!-- /featured --> 
+    
+  {% schema %} 
+  { 
+    "name": "Featured Product Parallax", 
+    "settings": [ 
+      { 
+        "type": "header", 
+        "content": "Parallax featured product" 
+      }, 
+      {
+        "type": "select",
+        "id": "parallax-height",
+        "options": [
+          {
+            "value": "XL",
+            "label": "XL"
+          },
+          {
+            "value": "LG",
+            "label": "LG"
+          },
+          {
+            "value": "MD",
+            "label": "MD"
+          }, 
+          {
+            "value": "SM",
+            "label": "SM"
+          }
+        ],
+        "default": "MD",
+        "label": "Height"
+      },
+      { 
+        "type": "image_picker", 
+        "id": "img_product", 
+        "label": "Section image" 
+      }, 
+      {
+        "type": "range",
+        "id": "opacity",
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "label": "Opacity",
+        "default": 2
+      },
+      { 
+        "type": "text", 
+        "id": "txt_button", 
+        "label": "Button text", 
+        "default": "View more" 
+      }, 
+      { 
+        "type": "product", 
+        "id": "featured_product_handle", 
+        "label": "Select product" 
+      }, 
+      {
+        "type": "select",
+        "id": "product_alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left",
+        "label": "Product Alignment"
+      },
+      {
+        "type": "color",
+        "id": "product_text_color",
+        "label": "Text Color",
+        "default": "#FFFFFF"
+      }
+    ], 
+    "presets": [ 
+      { 
+        "name": "Featured Product Parallax", 
+        "category": "Products" 
+      } 
+    ] 
+  } 
+  {% endschema %} 
+
+
+

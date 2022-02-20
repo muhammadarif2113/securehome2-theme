@@ -34,12 +34,6 @@
               "settings": {
                 "heading": "Info"
               }
-            },
-            "footer-2": {
-              "type": "text",
-              "settings": {
-                "heading": "Our mission"
-              }
             }
           },
           "block_order": [
