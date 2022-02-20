@@ -45,46 +45,6 @@
         "padding_bottom": 36
       }
     },
-    "16453950279c0e9ca3": {
-      "type": "collection-group",
-      "blocks": {
-        "16453950272cdf277a-0": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "home-cameras"
-          }
-        },
-        "16453950272cdf277a-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "car-dash-cam"
-          }
-        },
-        "16453950272cdf277a-2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "home-cameras"
-          }
-        }
-      },
-      "block_order": [
-        "16453950272cdf277a-0",
-        "16453950272cdf277a-1",
-        "16453950272cdf277a-2"
-      ],
-      "settings": {
-        "container_shape": "circle",
-        "image_fit": "cover",
-        "background": "#ffffff",
-        "opacity": 100,
-        "show_title": true,
-        "xxl_col": "col-xxl-4",
-        "xl_col": "col-xl-4",
-        "lg_col": "col-lg-4",
-        "md_col": "col-md-4",
-        "sm_col": "col-sm-2"
-      }
-    },
     "16453950194e65688c": {
       "type": "hero-two",
       "settings": {
@@ -93,24 +53,12 @@
         "background1": "#000000",
         "opacity1": 23,
         "button_label1": "Button label",
-        "button_link1": "",
+        "button_link1": "shopify:\/\/collections\/home-cameras",
         "image2": "shopify:\/\/shop_images\/vintage-camera-close-up.jpg",
         "background2": "#000000",
         "opacity2": 0,
         "button_label2": "Button label",
-        "button_link2": ""
-      }
-    },
-    "16453950245f4342ce": {
-      "type": "hero-parallax",
-      "settings": {
-        "parallax-height": "MD",
-        "img_product": "shopify:\/\/shop_images\/sports-car-parked-in-barcelona.jpg",
-        "opacity": 2,
-        "txt_button": "View more",
-        "featured_product_handle": "commute-car-camera",
-        "product_alignment": "left",
-        "product_text_color": "#FFFFFF"
+        "button_link2": "shopify:\/\/collections\/car-dash-cam"
       }
     },
     "1645395048514e4f90": {
@@ -129,6 +77,18 @@
         "lg_col": "col-lg-3",
         "md_col": "col-md-3",
         "sm_col": "col-sm-6"
+      }
+    },
+    "16453950245f4342ce": {
+      "type": "hero-parallax",
+      "settings": {
+        "parallax-height": "MD",
+        "img_product": "shopify:\/\/shop_images\/sports-car-parked-in-barcelona.jpg",
+        "opacity": 2,
+        "txt_button": "View more",
+        "featured_product_handle": "commute-car-camera",
+        "product_alignment": "left",
+        "product_text_color": "#ffffff"
       }
     },
     "16453964535972f8c1": {
@@ -152,10 +112,9 @@
   },
   "order": [
     "164539549070bfe3a2",
-    "16453950279c0e9ca3",
     "16453950194e65688c",
-    "16453950245f4342ce",
     "1645395048514e4f90",
+    "16453950245f4342ce",
     "16453964535972f8c1"
   ]
 }

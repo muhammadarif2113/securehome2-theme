@@ -6,11 +6,10 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "Welcome to our store",
-              "background_color": "#605e7d",
-              "announcement_text_color": "#FFFFFF",
+              "text": "Free Shipping on U.S. orders over $35",
+              "background_color": "#dedede",
+              "announcement_text_color": "#000000",
               "link": ""
             }
           }
