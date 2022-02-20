@@ -1,129 +1,161 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "164539549070bfe3a2": {
+      "type": "hero-one",
       "blocks": {
-        "heading": {
+        "1645395490a862e7e0-0": {
           "type": "heading",
           "settings": {
-            "heading_size": "large"
+            "title": "secure home",
+            "title_size": "lg"
           }
         },
-        "text": {
-          "type": "text"
-        },
-        "button": {
-          "type": "buttons",
+        "1645395490a862e7e0-1": {
+          "type": "paragraph",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": ""
+            "paragraph": "At Secure Home, we believe in keeping the people and things we love in check. Browse our selection for the latest technology in home and car surveillance. Staying home or venturing out, nobody has more ways to help keep you safe than Secure Home.",
+            "pa_alignment": "center"
+          }
+        },
+        "1645395490a862e7e0-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Collection",
+            "button_link": "shopify:\/\/collections"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "1645395490a862e7e0-0",
+        "1645395490a862e7e0-1",
+        "1645395490a862e7e0-2"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "hero_height": "100vh",
+        "image": "shopify:\/\/shop_images\/white-camera.jpg",
+        "background": "#000000",
+        "opacity": 23,
+        "info_alignment": "right",
+        "desktop_image_width": "small",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "16453950279c0e9ca3": {
+      "type": "collection-group",
       "blocks": {
-        "heading": {
-          "type": "heading"
+        "16453950272cdf277a-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "home-cameras"
+          }
         },
-        "text": {
-          "type": "text"
+        "16453950272cdf277a-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "car-dash-cam"
+          }
+        },
+        "16453950272cdf277a-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "home-cameras"
+          }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "16453950272cdf277a-0",
+        "16453950272cdf277a-1",
+        "16453950272cdf277a-2"
       ],
       "settings": {
-        "padding_top": 40,
-        "padding_bottom": 0
+        "container_shape": "circle",
+        "image_fit": "cover",
+        "background": "#ffffff",
+        "opacity": 100,
+        "show_title": true,
+        "xxl_col": "col-xxl-4",
+        "xl_col": "col-xl-4",
+        "lg_col": "col-lg-4",
+        "md_col": "col-md-4",
+        "sm_col": "col-sm-2"
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "16453950194e65688c": {
+      "type": "hero-two",
       "settings": {
-        "title": "Featured products",
-        "collection": "all",
-        "products_to_show": 8,
-        "show_view_all": false,
-        "show_secondary_image": true,
-        "padding_top": 28
+        "hero_height": "50vh",
+        "image1": "shopify:\/\/shop_images\/security-camera-camouflaged-on-wall-of-window-frames.jpg",
+        "background1": "#000000",
+        "opacity1": 23,
+        "button_label1": "Button label",
+        "button_link1": "",
+        "image2": "shopify:\/\/shop_images\/vintage-camera-close-up.jpg",
+        "background2": "#000000",
+        "opacity2": 0,
+        "button_label2": "Button label",
+        "button_link2": ""
       }
     },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection"
-        },
-        "product": {
-          "type": "product"
-        },
-        "collection-1": {
-          "type": "collection"
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ]
-    },
-    "video": {
-      "type": "video",
+    "16453950245f4342ce": {
+      "type": "hero-parallax",
       "settings": {
-        "heading": ""
+        "parallax-height": "MD",
+        "img_product": "shopify:\/\/shop_images\/sports-car-parked-in-barcelona.jpg",
+        "opacity": 2,
+        "txt_button": "View more",
+        "featured_product_handle": "commute-car-camera",
+        "product_alignment": "left",
+        "product_text_color": "#FFFFFF"
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column"
-        },
-        "column2": {
-          "type": "column"
-        },
-        "column3": {
-          "type": "column"
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
+    "1645395048514e4f90": {
+      "type": "collection-products-1",
       "settings": {
-        "title": "",
-        "image_width": "third",
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": ""
+        "collection": "home-cameras",
+        "total_products": 4,
+        "container_shape": "square",
+        "image_fit": "cover",
+        "background": "#edeff5",
+        "opacity": 100,
+        "show_title": true,
+        "show_price": true,
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-3",
+        "md_col": "col-md-3",
+        "sm_col": "col-sm-6"
+      }
+    },
+    "16453964535972f8c1": {
+      "type": "collection-products-1",
+      "settings": {
+        "collection": "car-dash-cam",
+        "total_products": 3,
+        "container_shape": "circle",
+        "image_fit": "cover",
+        "background": "#edeff5",
+        "opacity": 100,
+        "show_title": true,
+        "show_price": true,
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-3",
+        "md_col": "col-md-3",
+        "sm_col": "col-sm-6"
       }
     }
   },
   "order": [
-    "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "164539549070bfe3a2",
+    "16453950279c0e9ca3",
+    "16453950194e65688c",
+    "16453950245f4342ce",
+    "1645395048514e4f90",
+    "16453964535972f8c1"
   ]
 }

@@ -1,5 +1,95 @@
 {
-  "current": "Default",
+  "current": {
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Welcome to our store",
+              "background_color": "#605e7d",
+              "announcement_text_color": "#FFFFFF",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0"
+        ],
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "header_type": "header1",
+          "color_scheme": "background-1",
+          "logo": "shopify:\/\/shop_images\/cam-icon.png",
+          "logo_width": 90,
+          "menu": "main-menu",
+          "menu_two": "camera-menu",
+          "margin_bottom": 0
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          },
+          "footer-1": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Info",
+              "menu": "footer"
+            }
+          },
+          "614b5d3c-7a63-4b53-8cb1-13e00beac0a9": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "footer-1",
+          "614b5d3c-7a63-4b53-8cb1-13e00beac0a9"
+        ],
+        "settings": {
+          "footer_p": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+          "footer_p_align": "center",
+          "newsletter_enable": true,
+          "newsletter_heading": "Subscribe to our emails",
+          "show_social": true,
+          "margin_top": 48,
+          "padding_top": 36,
+          "padding_bottom": 36,
+          "footer_bottom_menu": ""
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
   "presets": {
     "Default": {
       "sections": {
@@ -9,13 +99,14 @@
             "announcement-bar-0": {
               "type": "announcement",
               "settings": {
-                "color_scheme": "background-1"
               }
             }
           },
           "block_order": [
             "announcement-bar-0"
-          ]
+          ],
+          "settings": {
+          }
         },
         "header": {
           "type": "header",
@@ -27,7 +118,9 @@
           "type": "footer",
           "blocks": {
             "footer-0": {
-              "type": "link_list"
+              "type": "link_list",
+              "settings": {
+              }
             },
             "footer-1": {
               "type": "link_list",
@@ -38,8 +131,7 @@
           },
           "block_order": [
             "footer-0",
-            "footer-1",
-            "footer-2"
+            "footer-1"
           ],
           "settings": {
             "show_social": true,
@@ -49,10 +141,14 @@
           }
         },
         "main-password-header": {
-          "type": "main-password-header"
+          "type": "main-password-header",
+          "settings": {
+          }
         },
         "main-password-footer": {
-          "type": "main-password-footer"
+          "type": "main-password-footer",
+          "settings": {
+          }
         }
       }
     }
