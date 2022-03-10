@@ -45,81 +45,20 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Rolex",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Cartier",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Hublot",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "467c67bc-93ac-4be8-9a8c-c0110cc299b7": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3",
-        "467c67bc-93ac-4be8-9a8c-c0110cc299b7"
-      ],
-      "settings": {
-        "title": "",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "Find the Perfect Piece of Wristwear...",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>For those seeking refined timepieces, LuxaryWatches is a center of excellence. We have provided high-quality luxury watches for over a century. Today, you can take your pick from world-leading designer names including Rolex, Cartier, and Hublot.<\/p>"
           }
         }
       },
@@ -128,10 +67,10 @@
         "text"
       ],
       "settings": {
-        "color_scheme": "background-1",
+        "color_scheme": "accent-1",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "padding_top": 12,
+        "padding_bottom": 36
       }
     },
     "collection_group": {
@@ -154,19 +93,12 @@
           "settings": {
             "collection": "hublot"
           }
-        },
-        "f557660a-0a62-4be4-9c90-bea43c8a97f4": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "home-cameras"
-          }
         }
       },
       "block_order": [
         "featured_collection1",
         "featured_collection2",
-        "featured_collection3",
-        "f557660a-0a62-4be4-9c90-bea43c8a97f4"
+        "featured_collection3"
       ],
       "settings": {
         "container_shape": "circle",
@@ -181,12 +113,56 @@
         "sm_col": "col-sm-6"
       }
     },
+    "164689973425cec3df": {
+      "type": "product-highlight",
+      "blocks": {
+        "16468997347dd14ddb-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Rolex Oyster Perpetual",
+            "title_size": "sm",
+            "title_alignment": "center"
+          }
+        },
+        "16468997347dd14ddb-1": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "Rolex presents the new generation of its Oyster Perpetual watches and brings a new model to the range, the Oyster Perpetual 41. The light reflections on the case sides highlight the elegant profile of the Oyster case, which is made from Oystersteel. Measuring 41 mm or 36 mm respectively, it is fitted with a domed bezel.",
+            "paragraph_font_size": 1,
+            "pa_alignment": "center"
+          }
+        },
+        "16468997347dd14ddb-2": {
+          "type": "button",
+          "settings": {
+            "center_button": true,
+            "button_label": "Add to Cart",
+            "button_link": "shopify:\/\/products\/rolex-sea-dweller"
+          }
+        }
+      },
+      "block_order": [
+        "16468997347dd14ddb-0",
+        "16468997347dd14ddb-1",
+        "16468997347dd14ddb-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/rolex-wall2.jpg",
+        "background": "#000000",
+        "info_margin_left": 2,
+        "info_width": 46,
+        "margin_top": 15,
+        "mobile_margin_left": 2,
+        "mobile_margin_top": 4,
+        "mobile_info_width": 100
+      }
+    },
     "hero_parallax": {
       "type": "hero-parallax",
       "settings": {
         "parallax-height": "MD",
         "img_product": "shopify:\/\/shop_images\/many-rolexs.jpg",
-        "opacity": 4,
+        "opacity": 3,
         "txt_button": "",
         "featured_product_handle": "rolex-sea-dweller",
         "product_alignment": "left",
@@ -217,14 +193,32 @@
         "hero_height": "50vh",
         "image1": "shopify:\/\/shop_images\/hublot-collection1.jpg",
         "background1": "rgba(0,0,0,0)",
-        "opacity1": 12,
+        "opacity1": 7,
         "button_label1": "Shop Hublot",
         "button_link1": "shopify:\/\/collections\/hublot",
-        "image2": "shopify:\/\/shop_images\/rolex-wall2.jpg",
+        "image2": "shopify:\/\/shop_images\/cartier-wall.jpg",
         "background2": "rgba(0,0,0,0)",
-        "opacity2": 0,
-        "button_label2": "Shop Rolex",
-        "button_link2": "shopify:\/\/collections\/rolex"
+        "opacity2": 10,
+        "button_label2": "Shop Cartier",
+        "button_link2": "shopify:\/\/collections\/cartier-1"
+      }
+    },
+    "164693872605b4c8fa": {
+      "type": "collection-products-2",
+      "settings": {
+        "collection": "hublot",
+        "total_products": 3,
+        "container_shape": "rectangle",
+        "image_fit": "contain",
+        "background": "#000000",
+        "opacity": 100,
+        "show_title": true,
+        "show_price": true,
+        "xxl_col": "col-xxl-4",
+        "xl_col": "col-xl-4",
+        "lg_col": "col-lg-4",
+        "md_col": "col-md-3",
+        "sm_col": "col-sm-6"
       }
     },
     "collection_products_1": {
@@ -232,73 +226,29 @@
       "settings": {
         "collection": "cartier-1",
         "total_products": 8,
-        "container_shape": "square",
-        "image_fit": "cover",
-        "background": "#edeff5",
+        "container_shape": "rectangle",
+        "image_fit": "contain",
+        "background": "#000000",
         "opacity": 100,
         "show_title": true,
         "show_price": true,
         "xxl_col": "col-xxl-4",
-        "xl_col": "col-xl-3",
-        "lg_col": "col-lg-3",
-        "md_col": "col-md-3",
+        "xl_col": "col-xl-4",
+        "lg_col": "col-lg-4",
+        "md_col": "col-md-6",
         "sm_col": "col-sm-6"
-      }
-    },
-    "164689973425cec3df": {
-      "type": "product-highlight",
-      "blocks": {
-        "16468997347dd14ddb-0": {
-          "type": "heading",
-          "settings": {
-            "title": "Rolex",
-            "title_size": "md",
-            "title_alignment": "center"
-          }
-        },
-        "16468997347dd14ddb-1": {
-          "type": "paragraph",
-          "settings": {
-            "paragraph": "Example paragraph: I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juice ramps irony succulents.",
-            "paragraph_font_size": 1,
-            "pa_alignment": "center"
-          }
-        },
-        "16468997347dd14ddb-2": {
-          "type": "button",
-          "settings": {
-            "center_button": true,
-            "button_label": "Add to Cart",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "16468997347dd14ddb-0",
-        "16468997347dd14ddb-1",
-        "16468997347dd14ddb-2"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/rolex-wall2.jpg",
-        "background": "#000000",
-        "info_margin_left": 2,
-        "info_width": 46,
-        "margin_top": 15,
-        "mobile_margin_left": 2,
-        "mobile_margin_top": 4,
-        "mobile_info_width": 100
       }
     }
   },
   "order": [
     "hero_one",
-    "multicolumn",
     "rich_text",
     "collection_group",
+    "164689973425cec3df",
     "hero_parallax",
     "1646898224b88b8e74",
     "hero_two",
-    "collection_products_1",
-    "164689973425cec3df"
+    "164693872605b4c8fa",
+    "collection_products_1"
   ]
 }

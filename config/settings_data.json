@@ -4,6 +4,13 @@
     "sticky_header": true,
     "transparent_header": true,
     "body_bg": "#000000",
+    "buttons_border_thickness": 2,
+    "buttons_radius": 0,
+    "social_twitter_link": "https:\/\/twitter.com\/shopify",
+    "social_facebook_link": "https:\/\/facebook.com\/shopify",
+    "social_instagram_link": "http:\/\/instagram.com\/shopify",
+    "social_tiktok_link": "https:\/\/tiktok.com\/@shopify",
+    "social_youtube_link": "https:\/\/www.youtube.com\/shopify",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -40,11 +47,19 @@
               "heading": "Info",
               "menu": "footer"
             }
+          },
+          "8d1307f2-03b3-48f2-acca-267321f36baa": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
           }
         },
         "block_order": [
           "footer-0",
-          "footer-1"
+          "footer-1",
+          "8d1307f2-03b3-48f2-acca-267321f36baa"
         ],
         "settings": {
           "footer_p": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
