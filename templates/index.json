@@ -45,6 +45,46 @@
         "padding_bottom": 36
       }
     },
+    "collection_group": {
+      "type": "collection-group",
+      "blocks": {
+        "featured_collection1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rolex"
+          }
+        },
+        "featured_collection2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cartier"
+          }
+        },
+        "featured_collection3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection1",
+        "featured_collection2",
+        "featured_collection3"
+      ],
+      "settings": {
+        "container_shape": "square",
+        "image_fit": "cover",
+        "background": "#ffffff",
+        "opacity": 100,
+        "show_title": true,
+        "xxl_col": "col-xxl-4",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-3",
+        "md_col": "col-md-3",
+        "sm_col": "col-sm-6"
+      }
+    },
     "hero_two": {
       "type": "hero-two",
       "settings": {
@@ -85,54 +125,7 @@
         "txt_button": "View more",
         "featured_product_handle": "",
         "product_alignment": "left",
-        "product_text_color": "#FFFFFF"
-      }
-    },
-    "collection_group": {
-      "type": "collection-group",
-      "blocks": {
-        "featured_collection1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection4": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection1",
-        "featured_collection2",
-        "featured_collection3",
-        "featured_collection4"
-      ],
-      "settings": {
-        "container_shape": "rectangle",
-        "image_fit": "cover",
-        "background": "#edeff5",
-        "opacity": 100,
-        "show_title": true,
-        "xxl_col": "col-xxl-3",
-        "xl_col": "col-xl-3",
-        "lg_col": "col-lg-3",
-        "md_col": "col-md-3",
-        "sm_col": "col-sm-6"
+        "product_text_color": "#ffffff"
       }
     },
     "image_banner": {
@@ -331,10 +324,10 @@
   },
   "order": [
     "hero_one",
+    "collection_group",
     "hero_two",
     "collection_products_1",
     "hero_parallax",
-    "collection_group",
     "image_banner",
     "rich_text",
     "featured_collection",
