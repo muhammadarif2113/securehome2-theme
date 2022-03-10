@@ -51,24 +51,32 @@
           "8d1307f2-03b3-48f2-acca-267321f36baa": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
+              "heading": "About",
+              "menu": "about"
+            }
+          },
+          "98981dc4-080e-47e3-aee0-f7d6840884bb": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Products",
+              "menu": "products-footer"
             }
           }
         },
         "block_order": [
           "footer-0",
           "footer-1",
-          "8d1307f2-03b3-48f2-acca-267321f36baa"
+          "8d1307f2-03b3-48f2-acca-267321f36baa",
+          "98981dc4-080e-47e3-aee0-f7d6840884bb"
         ],
         "settings": {
-          "footer_p": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+          "footer_p": "Store Hours: 10am to 5pm, Monday through Saturday\n\n(also open Sundays during the holiday season, from\nThanksgiving through New Year's Eve)",
           "footer_p_align": "left",
           "newsletter_enable": true,
           "newsletter_heading": "Subscribe to our emails",
           "show_social": true,
           "margin_top": 48,
-          "padding_top": 36,
+          "padding_top": 24,
           "padding_bottom": 36,
           "footer_bottom_menu": ""
         }
