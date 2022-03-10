@@ -113,6 +113,18 @@
         "sm_col": "col-sm-6"
       }
     },
+    "16469417848f17b8a9": {
+      "type": "hero-parallax",
+      "settings": {
+        "parallax-height": "MD",
+        "img_product": "shopify:\/\/shop_images\/many-rolexs.jpg",
+        "opacity": 2,
+        "txt_button": "",
+        "featured_product_handle": "rolex-day-date-ii",
+        "product_alignment": "left",
+        "product_text_color": "#FFFFFF"
+      }
+    },
     "164689973425cec3df": {
       "type": "product-highlight",
       "blocks": {
@@ -155,18 +167,6 @@
         "mobile_margin_left": 2,
         "mobile_margin_top": 4,
         "mobile_info_width": 100
-      }
-    },
-    "164694146442865ac0": {
-      "type": "hero-parallax",
-      "settings": {
-        "parallax-height": "MD",
-        "img_product": "shopify:\/\/shop_images\/many-rolexs.jpg",
-        "opacity": 2,
-        "txt_button": "",
-        "featured_product_handle": "rolex-day-date-ii",
-        "product_alignment": "left",
-        "product_text_color": "#FFFFFF"
       }
     },
     "1646898224b88b8e74": {
@@ -244,8 +244,8 @@
     "hero_one",
     "rich_text",
     "collection_group",
+    "16469417848f17b8a9",
     "164689973425cec3df",
-    "164694146442865ac0",
     "1646898224b88b8e74",
     "hero_two",
     "164693872605b4c8fa",
