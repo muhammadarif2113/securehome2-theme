@@ -8,7 +8,8 @@
           {%- for link in section.settings.menu.links -%}
             {%- if link.links == blank -%}
           <li class="header1__collection-link">
-            <a href="{{ link.url }}" style= "color: {{ section.settings.header_font_color }};">{{ link.title | escape }}</a>
+            {% comment %} <a href="{{ link.url }}" style= "color: {{ section.settings.header_font_color }};">{{ link.title | escape }}</a> {% endcomment %}
+            <a href="{{ link.url }}">{{ link.title | escape }}</a>
           </li>
             {%- else -%}
               {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
@@ -68,7 +69,8 @@
           {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
           {%- endfor -%}
         {% endif %}
-        <a href="{{ routes.cart_url }}" style= "color: {{ section.settings.header_font_color }};"><i class="fas fa-shopping-cart"></i></a>
+        {% comment %} <a href="{{ routes.cart_url }}" style= "color: {{ section.settings.header_font_color }};"><i class="fas fa-shopping-cart"></i></a> {% endcomment %}
+        <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart"></i></a>
         
         {%- if shop.customer_accounts_enabled -%}
           <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">

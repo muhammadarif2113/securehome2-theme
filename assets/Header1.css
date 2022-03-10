@@ -86,3 +86,7 @@
 .color-nav{
     background: yellow;
 }
+
+.fa, .fas{
+    color: #000000; 
+}
