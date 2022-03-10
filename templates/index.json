@@ -225,7 +225,7 @@
       "type": "collection-products-1",
       "settings": {
         "collection": "cartier-1",
-        "total_products": 8,
+        "total_products": 3,
         "container_shape": "rectangle",
         "image_fit": "contain",
         "background": "#000000",
