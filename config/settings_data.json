@@ -44,8 +44,8 @@
           "footer-1": {
             "type": "link_list",
             "settings": {
-              "heading": "Info",
-              "menu": "footer"
+              "heading": "Information",
+              "menu": "information-footer"
             }
           },
           "8d1307f2-03b3-48f2-acca-267321f36baa": {
