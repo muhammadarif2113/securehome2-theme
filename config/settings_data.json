@@ -37,8 +37,8 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
+              "heading": "Customer Care",
+              "menu": "customer-footer"
             }
           },
           "footer-1": {
