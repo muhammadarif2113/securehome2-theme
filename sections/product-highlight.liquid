@@ -1,0 +1,493 @@
+
+<script src="{{ 'vue.js' | asset_url }}" ></script>
+
+<style>
+  .product-highlight{
+    background: black; 
+    padding: 100px 0; 
+    color: white; 
+  }
+  .product-highlight__img{
+    width: 100%; 
+    height: auto; 
+  }
+  .product-highlight__info-container h2{
+    color: white;
+  }
+  .product-highlight__paragraph {
+    line-height: 1.4; 
+    color: white;
+  }
+  .product-highlight__button {
+    background: white; 
+    border: none; 
+    padding: 15px 40px; 
+  }
+
+  .product-highlight__title--sm{
+    font-size: 2rem;
+  }
+  .product-highlight__title--md{
+      font-size: 3rem;
+  }
+  .product-highlight__title--lg{
+      font-size: 4.5rem;
+  }
+  .product-highlight__title--xl{
+      font-size: 6rem;
+  }
+
+
+  
+
+  @media (min-width: 767px) { 
+    .desktop-width{
+      width: {{ section.settings.info_width }}%; 
+      margin-left: {{ section.settings.info_margin_left }}%; 
+      margin-top: {{ section.settings.margin_top }}%
+
+    }
+
+  }
+
+  @media (max-width: 767px) { 
+    .mobile-width{
+      width: {{ section.settings.mobile_info_width }}%; 
+      margin-left: {{ section.settings.mobile_margin_left }}%;
+      margin-top: {{ section.settings.mobile_margin_top }}%
+    }
+
+  }
+
+  .hero1 {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 50px
+}
+
+.hero1--aligned-center .hero1__content-container {
+    justify-content: center
+}
+
+.hero1--aligned-left .hero1__content-container {
+    justify-content: flex-start;
+    padding-left: 20rem
+}
+
+.hero1--aligned-right .hero1__content-container {
+    justify-content: flex-end;
+    padding-right: 20rem
+}
+
+.hero1__bg {
+    position: absolute;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1
+}
+
+.hero1__content-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center
+}
+
+.hero1__info {
+    max-width: 400px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.hero1__title {
+    font-size: 3rem;
+    font-family: "Bebas Neue", cursive;
+    color: #fff
+}
+
+.hero1__paragraph {
+    margin-bottom: 2rem
+}
+
+.hero1__button {
+    padding: 15px 30px;
+    background: #fff;
+    text-align: center;
+    width: 200px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: .8rem
+}
+
+.hero1--25vh {
+    height: 25vh;
+}
+.hero1--50vh {
+    height: 50vh;
+}
+.hero1--75vh {
+    height: 75vh;
+}
+.hero1--100vh {
+    height: 100vh;
+}
+
+
+.hero1__paragraph--aligned-center{
+    text-align: center;
+}
+
+.hero1__paragraph--aligned-right{
+    text-align: right;
+}
+
+.hero1__paragraph--aligned-left{
+    text-align: left;
+}
+</style>
+
+<div class="product-highlight" style="background: {{ section.settings.background }};">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        {%- if section.settings.image != blank -%}
+          <img
+              srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+              {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+              {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+              {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+              {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
+              {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '2000x' }} 2000w,{%- endif -%}
+              {{ section.settings.image | img_url: 'master' }} {{ section.settings.image.width }}w"
+              src="{{ section.settings.image | img_url: '1500x' }}"
+              sizes="(min-width: {{ settings.page_width }}px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+              alt="{{ section.settings.image.alt | escape }}"
+              loading="lazy"
+              width="{{ section.settings.image.width }}"
+              height="{{ section.settings.image.height }}"
+              class="product-highlight__img"
+          >
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+    </div>
+    <div class="col-md-4 desktop-width mobile-width">
+      <div class="product-highlight__info-container">
+
+        {%- for block in section.blocks -%}
+          {% case block.type %}
+            {%- when 'heading' -%}
+              <h2 class="product-highlight__title product-highlight__title--{{ block.settings.title_size }}" style="text-align: {{ block.settings.title_alignment }};">
+                {{ block.settings.title | escape }}
+              </h2>
+
+            {%- when 'paragraph' -%}
+              <p class="product-highlight__paragraph" style="font-size: {{ block.settings.paragraph_font_size }}rem; text-align: {{ block.settings.pa_alignment }};">
+                 {{ block.settings.paragraph | escape }}
+              </p>
+            {%- when 'button' -%}
+              {%- if block.settings.button_label != blank -%}
+                <button @click="addToCart" class="product-highlight__button" style="{%- if block.settings.center_button == true -%} display: block; margin: 0 auto; {%- endif -%}">
+                  {% assign button_title = block.settings.button_label | escape %}
+                  {% assign product_url = block.settings.button_link %}
+                   ${ button_title } 
+                </button>
+              {%- endif -%}
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+  const productHighlight = Vue.createApp({
+    delimiters: ['${', '}'], 
+    created() {
+      fetch('{{product_url}}.js')
+      .then(res => res.json())
+      .then((data) => {
+        this.product_id = data.variants[0].id
+        console.log(this.product_id)
+      })
+    }, 
+    methods: {
+      addToCart(){
+        console.log('clicked button to add to cart')
+        fetch('/cart/add.js', {
+          body: JSON.stringify({
+            'id': this.product_id, 
+            'quantity': 1
+          }),
+          credentials: 'same-origin', 
+          headers: {
+            'Content-Type': 'application/json', 
+            'X-Requested-With': 'xmlhttprequest'
+          }, 
+          method: 'POST'
+        }).then(function (response) {
+          return response.json(); 
+        }).then(function (json) {
+          console.log(json)
+        }).catch(function(err){
+          console.log(err)
+        }); 
+      }
+    }, 
+    data() {
+      return {
+        button_title: '{{ button_title }}', 
+        product_id: ''
+      }
+    }
+  }).mount('.product-highlight')
+</script>
+
+
+
+{% schema %}
+{
+  "name": "Product Highlight",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Title, Paragraph, Button Positioning"
+    },
+    {
+      "type": "range",
+      "id": "info_margin_left",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "%",
+      "default": 0,
+      "label": "Move Info Section Right"
+    },
+    {
+      "type": "range",
+      "id": "info_width",
+      "min": 20,
+      "max": 70,
+      "step": 2,
+      "unit": "%",
+      "default": 30,
+      "label": "Info Section Width"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": -10,
+      "max": 15,
+      "step": 1,
+      "unit": "%",
+      "default": 0,
+      "label": "Move Info Section Down"
+    },
+    {
+      "type": "header",
+      "content": "Mobile - Title, Paragraph, Button Positioning"
+    },
+    {
+      "type": "range",
+      "id": "mobile_margin_left",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "%",
+      "default": 0,
+      "label": "Mobile - Move Info Section Right"
+    },
+    {
+      "type": "range",
+      "id": "mobile_margin_top",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "unit": "%",
+      "default": 0,
+      "label": "Mobile - Move Info Section Down"
+    },
+    {
+      "type": "range",
+      "id": "mobile_info_width",
+      "min": 20,
+      "max": 100,
+      "step": 2,
+      "unit": "%",
+      "default": 30,
+      "label": "Mobile Info Section Width"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.image-with-text.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Title"
+        }, 
+        {
+          "type": "select",
+          "id": "title_size",
+          "options": [
+            {
+              "value": "sm",
+              "label": "Small"
+            },
+            {
+              "value": "md",
+              "label": "Medium"
+            },
+            {
+              "value": "lg",
+              "label": "Large"
+            }, 
+            {
+              "value": "xl",
+              "label": "Extra Large"
+            }
+          ],
+          "default": "md",
+          "label": "Font Size"
+        }, 
+        {
+          "type": "select",
+          "id": "title_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left",
+          "label": "Title Alignment"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "paragraph",
+          "label": "Paragraph",
+          "default": "Example paragraph: I'm baby kogi cardigan kitsch hammock banjo. Typewriter viral man braid hot chicken, farm-to-table fashion axe intelligentsia lomo green juice ramps irony succulents."
+        },
+        {
+          "type": "range",
+          "id": "paragraph_font_size",
+          "min": 0.8,
+          "max": 1.4,
+          "step": 0.1,
+          "unit": "rem",
+          "default": 1,
+          "label": "Paragraph Font Size"
+        },
+        {
+          "type": "select",
+          "id": "pa_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left",
+          "label": "Paragraph Alignment"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.image-with-text.blocks.button.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "center_button",
+          "label": "Center Button",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Add to Cart",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+          "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Highlight",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -44,7 +44,9 @@ table {
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
-    height: 84px
+    height: 84px;
+    transition: all .3s ease-in-out;  
+    z-index: 300;
 }
 
 .header1 a {
@@ -1170,11 +1172,7 @@ legend {
     margin: 0 auto;
 
 }
-.parallax{
-    /* background: url('https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80') no-repeat center;  */
-    /* background-size: cover;
-    background-attachment: fixed;  */
-}
+
 
 .featured { 
 
@@ -7782,11 +7780,12 @@ a:hover {
 }
 
 .fixed-nav.transparent-nav .header {
-    background: transparent 
+    background: transparent; 
 }
 
 .fixed-nav.transparent-nav .header a {
-    color: #fff
+    /* color: #fff */
+    color: blue; 
 }
 
 .fixed-nav.transparent-nav .header .header1__collection-link .collection-link__sub-links a, .fixed-nav.transparent-nav .header .header2__collection-link .collection-link__sub-links a, .fixed-nav.transparent-nav .header .header3__collection-link .collection-link__sub-links a {
@@ -7800,5 +7799,10 @@ a:hover {
 .fixed-nav .header {
     position: absolute;
     width: 100%;
-    z-index: 20
+}
+
+
+.header-fixed{
+    position: fixed;
+    width: 100%;
 }

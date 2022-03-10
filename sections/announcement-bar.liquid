@@ -1,3 +1,4 @@
+{{ 'AnnounceBar.css' | asset_url | stylesheet_tag }}
 
 {%- for block in section.blocks -%}
   {%- case block.type -%}
@@ -10,7 +11,6 @@
             <a href="{{ block.settings.link }}" style="color: {{ block.settings.announcement_text_color }};">
           {%- endif -%}
                 {{ block.settings.text | escape }}
-
               </p>
           {%- if block.settings.link != blank -%}
             </a>
