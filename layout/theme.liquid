@@ -201,9 +201,12 @@
 
       {% style %}
         :root {
+          --header-before-fontColor: {{ settings.header_before_font_color }}; 
+          --header-fontColor: {{ settings.header_font_color }}; 
           --body-bg: {{ settings.body_bg }};
-          --header-bg: {{settings.header_bg }}; 
-          --announcement-bar-default: #f7f9fd
+          --header-bg: {{ settings.header_bg }}; 
+          --announcement-bar-default: #f7f9fd;
+          --product-title-price-color: {{ settings.product_title_price_color }}
         }
 
         body {
@@ -219,7 +222,7 @@
         }
 
         .fixed-nav.transparent-nav .header a {
-            color: #fff
+            color: var(--header-before-fontColor); 
         }
 
         .fixed-nav.transparent-nav .header .header1__collection-link .collection-link__sub-links a,

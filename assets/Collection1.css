@@ -44,8 +44,10 @@
 }
 
 .collection1__product-info {
-    display: flex;
-    justify-content: space-between
+    color: var(--product-title-price-color);
+    /* display: flex;
+    justify-content: space-between; */
+    text-align: center;
 }
 
 .collection1__product-title {
@@ -120,4 +122,8 @@
 
 .collection1__product-img--contain img{
     object-fit: contain;
+}
+
+#title-logo{
+    text-align: center;
 }

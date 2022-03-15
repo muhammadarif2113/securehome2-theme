@@ -1,6 +1,10 @@
 {{ 'Collection1.css' | asset_url | stylesheet_tag }}
 <div class="collection collection1">
     <div class="container">
+      <div id="title-logo">
+        <h2 style="color: {{ section.settings.title_color }}">{{ section.settings.title | escape }}</h2>
+        <i class="fas fa-minus fa-2x" style="color: #D9D9D9;"></i>
+      </div>
       <div class="row">
         {%- for block in section.blocks -%}
         <div class="{{ section.settings.xxl_col }} {{ section.settings.xl_col }} {{ section.settings.lg_col }} {{ section.settings.md_col }} {{ section.settings.sm_col }}">
@@ -60,6 +64,18 @@
     "name": "Collection Group",
     "class": "section",
     "settings": [
+      {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Collection Title"
+      }, 
+      {
+        "type": "color",
+        "id": "title_color",
+        "label": "Title Color",
+        "default": "#FFFFFF"
+      },
       {
         "type": "select",
         "id": "container_shape",

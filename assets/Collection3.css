@@ -69,8 +69,11 @@
 }
 
 .collection3__product-info {
-    display: flex;
-    justify-content: space-between
+    color: var(--product-title-price-color); 
+    /* display: flex;
+    justify-content: space-between;  */
+    text-align: center;
+
 }
 
 .collection3__product-title {

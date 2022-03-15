@@ -8,14 +8,14 @@
           {%- for link in section.settings.menu.links -%}
             {%- if link.links == blank -%}
           <li class="header1__collection-link">
-            {% comment %} <a href="{{ link.url }}" style= "color: {{ section.settings.header_font_color }};">{{ link.title | escape }}</a> {% endcomment %}
             <a href="{{ link.url }}">{{ link.title | escape }}</a>
+            {% comment %} <a href="{{ link.url }}">{{ link.title | escape }}</a> {% endcomment %}
           </li>
             {%- else -%}
               {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
 
               <li class="header1__collection-link">
-                <a href="{{ link.url }}" style= "color: {{ section.settings.header_font_color }};">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
+                <a href="{{ link.url }}">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
                 <ul class="collection-link__sub-links">
                   {%- for childlink in link.links -%}
                     <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
@@ -29,8 +29,8 @@
         </ul>
     
       
-      <div class="header1__logo">
-        <a href="{{ routes.root_url }}" style= "color: {{ section.settings.header_font_color }};">
+      <div class="header1__logo ">
+        <a href="{{ routes.root_url }}">
           {%- if section.settings.logo != blank -%}
             {%- assign image_size = section.settings.logo_width | append: 'x' -%}
             <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
@@ -52,7 +52,7 @@
           {%- for link in section.settings.menu_two.links -%}
             {%- if link.links == blank -%}
           <li class="header1__collection-link">
-            <a href="{{ link.url }}" style= "color: {{ section.settings.header_font_color }};">{{ link.title | escape }}</a>
+            <a href="{{ link.url }}">{{ link.title | escape }}</a>
           </li>
             {%- else -%}
               {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
@@ -264,12 +264,6 @@
   "name": "t:sections.header.name",
   "class": "section-header",
   "settings": [
-    {
-      "type": "color",
-      "id": "header_font_color",
-      "label": "Header Font Color", 
-      "default": "#FFFFFF"
-    },
     {
       "type": "select",
       "id": "header_type",

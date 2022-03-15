@@ -16,9 +16,23 @@
       },
       {
         "type": "color",
+        "id": "header_before_font_color",
+        "default": "#FFFFFF",
+        "label": "Header Font Color",
+        "info": "Font color of header before scroll"
+      },
+      {
+        "type": "color",
+        "id": "header_font_color",
+        "default": "#000000",
+        "label": "Header Font Color",
+        "info": "Font color of header after scroll"
+      },
+      {
+        "type": "color",
         "id": "header_bg",
         "default": "#f7f9fd",
-        "label": "Body Background",
+        "label": "Header Background Color",
         "info": "This is the background color for the header"
       },
       {
@@ -52,6 +66,13 @@
         "default": "#f7f9fd",
         "label": "Body Background",
         "info": "This is the background color for the whole site"
+      },
+      {
+        "type": "color",
+        "id": "product_title_price_color",
+        "default": "#FFFFFF",
+        "label": "Product's Title and Price Color",
+        "info": "This is the color for product's titles and prices"
       },
       {
         "type": "header",
