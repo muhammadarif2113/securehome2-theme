@@ -3,13 +3,14 @@
   {% when 'header1' %}
     {{ 'Header1.css' | asset_url | stylesheet_tag }}
     <header class="header header1"> 
+      <i class="fas fa-bars" id="menu-icon"></i>
       <ul class="header1__collections-nav">
+        {% comment %} <i class="fas fa-bars" id="menu-icon"></i> {% endcomment %}
         {%- if section.settings.menu != blank -%}
           {%- for link in section.settings.menu.links -%}
             {%- if link.links == blank -%}
           <li class="header1__collection-link">
             <a href="{{ link.url }}">{{ link.title | escape }}</a>
-            {% comment %} <a href="{{ link.url }}">{{ link.title | escape }}</a> {% endcomment %}
           </li>
             {%- else -%}
               {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
@@ -26,10 +27,10 @@
           {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
           {%- endfor -%}
         {% endif %}
-        </ul>
+      </ul>
     
       
-      <div class="header1__logo ">
+      <div class="header1__logo">
         <a href="{{ routes.root_url }}">
           {%- if section.settings.logo != blank -%}
             {%- assign image_size = section.settings.logo_width | append: 'x' -%}
@@ -47,6 +48,9 @@
         </a>
       </div>
 
+      <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon-mobile"></i></a>
+
+      
       <ul class="header1__collections-nav">
         {%- if section.settings.menu_two != blank -%}
           {%- for link in section.settings.menu_two.links -%}
@@ -69,8 +73,7 @@
           {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
           {%- endfor -%}
         {% endif %}
-        {% comment %} <a href="{{ routes.cart_url }}" style= "color: {{ section.settings.header_font_color }};"><i class="fas fa-shopping-cart"></i></a> {% endcomment %}
-        <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart"></i></a>
+        <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
         
         {%- if shop.customer_accounts_enabled -%}
           <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
@@ -79,6 +82,72 @@
         {%- endif -%}
         
       </ul>
+
+      {% comment %} <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a> {% endcomment %}
+
+      {% comment %} <div class="cart-ctn"> 
+        <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
+      </div> {% endcomment %}
+
+      <nav class="mobile-nav">
+        <ul class="header1__collections-nav-mobile">
+          {%- if section.settings.menu != blank -%}
+            {%- for link in section.settings.menu.links -%}
+              {%- if link.links == blank -%}
+            <li class="header1__collection-link">
+              <hr>
+              <a href="{{ link.url }}">{{ link.title | escape }}</a>
+            </li>
+              {%- else -%}  
+                <li class="header1__collection-link">
+                  <hr>
+                  <a href="{{ link.url }}">{{ link.title | escape }}</a>
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                  <div class="collection-link__sub-links-mobile">
+                    {%- for childlink in link.links -%}
+                      <span><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></span>
+                    {%- endfor -%}
+                  </div>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          {% endif %}
+        </ul>
+
+        <ul class="header1__collections-nav-mobile">
+          {%- if section.settings.menu_two != blank -%}
+            {%- for link in section.settings.menu_two.links -%}
+              {%- if link.links == blank -%}
+            <li class="header1__collection-link">
+              <hr>
+              <a href="{{ link.url }}">{{ link.title | escape }}</a>
+            </li>
+              {%- else -%}
+                {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
+  
+                <li class="header1__collection-link">
+                  <hr>
+                  <a href="{{ link.url }}">{{ link.title | escape }}</a>
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                  <div class="collection-link__sub-links-mobile">
+                    {%- for childlink in link.links -%}
+                      <span><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></span>
+                    {%- endfor -%}
+                  </div>
+                </li>
+              {%- endif -%}
+            {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
+            {%- endfor -%}
+          {% endif %}
+          
+          {%- if shop.customer_accounts_enabled -%}
+            <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+              <i class="fas fa-user"></i>
+            </a>
+          {%- endif -%}
+          
+        </ul>
+      </nav>
     </header>
 
   {% when 'header2' %}
@@ -244,17 +313,30 @@
     headerWrapper.style.zIndex = '7'
   }
 
+  const toggle = document.querySelector('#menu-icon'); 
+  const mobileMenu = document.querySelector('nav'); 
+  const mobileMenuActive = document.querySelector('.active'); 
+  console.log(mobileMenuActive)
+  console.log(mobileMenu); 
+  toggle.addEventListener('click', () => {
+    if(mobileMenu.classList.contains('active')){
+      mobileMenu.classList.remove('active')
+      bodyTag.style.position = 'static'
+      {% comment %} mobileMenu.style.display = 'none'; {% endcomment %}
+    } else {
+      if(bodyTag.classList.contains('transparent-nav')){
+        bodyTag.classList.remove('transparent-nav')
+        headerWrapper1.classList.add('header1--color')
+      }
+      mobileMenu.classList.add('active'); 
+      {% comment %} mobileMenu.style.display = 'block';  {% endcomment %}
+      bodyTag.style.position = 'fixed'
+    }
+  })
 
-  {% comment %} console.log(bodyTag.children)
-  if(bodyTag.contains(bar)){
-    console.log('contains')
-  } else {
-    console.log('no contain')
-  } {% endcomment %}
+  
 
-  // for(let i =0; i < bodyTag.childNodes.length; i++){
 
-  // }
  
 </script>
 
