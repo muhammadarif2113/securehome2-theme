@@ -76,3 +76,92 @@
     font-size: 2rem;
     font-family: "Bebas Neue", cursive
 }
+
+#cart-icon{
+    margin-right: 10px;
+}
+
+#cart-icon, #menu-icon{
+    font-size: 1.0rem;
+}
+
+#menu-icon{
+    display: none;
+    color: var(--header-before-fontColor);
+}
+
+.mobile-nav, #cart-icon-mobile{
+    display: none;
+}
+
+
+@media(max-width: 800px){
+    #menu-icon{
+        display: block;
+        margin-left: 22px;
+        cursor: pointer; 
+        line-height: 20px; 
+        color: var(--header-fontColor);
+        font-size: 1.3rem;
+
+    }
+   
+    .mobile-nav{
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--header-bg);
+        top: 84px;
+        bottom: 0;
+        left: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        text-align: center;
+        margin: 0 auto;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        
+    }
+    .mobile-nav.active{
+        display: block;
+        width: 100%;
+        top: 84px;
+        left: 0; 
+        bottom: 0;
+        height: 100vh;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+    hr{
+        color: var(--header-fontColor); 
+    }
+    .header3__collections-nav{
+        display: none;
+    }
+    .header3__collections-nav-mobile li{
+        display: block;
+        text-align: left;
+    }
+    .header3__logo{
+        margin: 0 auto;
+    }
+    #cart-icon{
+        display: inline-block;
+        font-size: 1.3rem;
+        margin-bottom: 6px;
+
+    }
+    .collection-link__sub-links-mobile{
+        display: inline-block;
+    }
+    .collection-link__sub-links-mobile span{
+        margin-left: 20px;
+    }
+    .fa-long-arrow-alt-right{
+        margin-left: 10px;
+    }
+    
+}
