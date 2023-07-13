@@ -7,7 +7,7 @@
 }
 
 .hero1--aligned-center .hero1__content-container {
-    justify-content: center
+    justify-content: center; 
 }
 
 .hero1--aligned-left .hero1__content-container {
@@ -110,3 +110,16 @@
 .hero1__paragraph--aligned-left{
     text-align: left;
 }
+
+@media screen and (max-width: 1065px) {
+
+    .hero1--aligned-right .hero1__content-container {
+        justify-content: center !important; 
+        padding-right: 0 !important;
+    }
+    .hero1--aligned-left .hero1__content-container {
+        justify-content: center !important; 
+        padding-right: 0 !important;
+    }
+}
+
