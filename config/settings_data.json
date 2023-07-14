@@ -2,7 +2,7 @@
   "current": {
     "header_bg": "#ffffff",
     "sticky_header": true,
-    "transparent_header": true,
+    "transparent_header": false,
     "body_bg": "#000000",
     "buttons_border_thickness": 2,
     "buttons_radius": 0,
@@ -14,20 +14,32 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
+        "blocks": {
+          "aa006fbc-8ff3-4212-b67a-cba5b84bc5a4": {
+            "type": "announcement",
+            "settings": {
+              "text": "Welcome to our store",
+              "background_color": "#1202ff",
+              "announcement_text_color": "#FFFFFF",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "aa006fbc-8ff3-4212-b67a-cba5b84bc5a4"
+        ],
         "settings": {
         }
       },
       "header": {
         "type": "header",
         "settings": {
-          "header_font_color": "#ffffff",
           "header_type": "header1",
           "color_scheme": "background-1",
           "background": "#535353",
-          "logo": "shopify:\/\/shop_images\/Branded-Watch-PNG-Pic.png",
-          "logo_width": 100,
+          "logo_width": 70,
           "menu": "main-menu",
-          "menu_two": "watches-header",
+          "menu_two": "",
           "margin_bottom": 0
         }
       },
@@ -105,6 +117,8 @@
             "announcement-bar-0": {
               "type": "announcement",
               "settings": {
+                "background_color": "#605e7d",
+                "announcement_text_color": "#FFFFFF"
               }
             }
           },
@@ -117,6 +131,7 @@
         "header": {
           "type": "header",
           "settings": {
+            "background": "#535353",
             "logo_width": 90
           }
         },
@@ -141,8 +156,6 @@
           ],
           "settings": {
             "show_social": true,
-            "enable_country_selector": false,
-            "enable_language_selector": false,
             "margin_top": 48
           }
         },
