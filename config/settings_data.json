@@ -18,8 +18,8 @@
           "4468acc1-8dfa-4a79-8769-ace96c515216": {
             "type": "announcement",
             "settings": {
-              "text": "Welcome to our store",
-              "background_color": "#605e7d",
+              "text": "fast and free shipping on all orders",
+              "background_color": "#000000",
               "announcement_text_color": "#ffffff",
               "link": ""
             }
@@ -38,8 +38,8 @@
           "color_scheme": "background-1",
           "background": "#535353",
           "logo_width": 100,
-          "menu": "main-menu",
-          "menu_two": "main-menu",
+          "menu": "category",
+          "menu_two": "trending",
           "margin_bottom": 0
         }
       },
