@@ -50,7 +50,7 @@
           </div>
         </div>
 
-        <div class="col-4 col-md-4 d-flex align-items-center justify-content-start">
+        <div id="last-nav" class="col-4 col-md-4 d-flex align-items-center justify-content-start">
           <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon-mobile"></i></a>
           <ul class="header__collections-nav" style="margin: 0;">
             {%- if section.settings.menu_two != blank -%}
@@ -60,9 +60,7 @@
                 <a href="{{ link.url }}">{{ link.title | escape }}</a>
               </li>
                 {%- else -%}
-                  {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
-
-                  <li class="header1__collection-link" style="padding-right: 40px;">
+                  <li class="header1__collection-link">
                     <a href="{{ link.url }}">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
                     <ul class="collection-link__sub-links">
                       {%- for childlink in link.links -%}
@@ -71,16 +69,15 @@
                     </ul>
                   </li>
                 {%- endif -%}
-              {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
               {%- endfor -%}
             {% endif %}
             <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
             
-            {%- if shop.customer_accounts_enabled -%}
+             {%- if shop.customer_accounts_enabled -%}
               <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
                 <i class="fas fa-user"></i>
               </a>
-            {%- endif -%}
+            {%- endif -%} 
             
           </ul>
         </div>
