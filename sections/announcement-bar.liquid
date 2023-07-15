@@ -3,7 +3,7 @@
 {%- for block in section.blocks -%}
   {%- case block.type -%}
     {%- when 'announcement' -%}
-      <div class="announce-bar" style="height:35px; font-family: Poppins; font-size: 16px; letter-spacing: 3px; background: {{ block.settings.background_color }}; color: {{ block.settings.announcement_text_color }}" aria-label="{{ 'sections.header.announcement' | t }}">
+      <div class="announce-bar" style="height:35px; font-family: Poppins; font-size: 16px; letter-spacing: 3px; text-transform: uppercase; background: {{ block.settings.background_color }}; color: {{ block.settings.announcement_text_color }}" aria-label="{{ 'sections.header.announcement' | t }}">
 
      
         {%- if block.settings.text != blank -%}

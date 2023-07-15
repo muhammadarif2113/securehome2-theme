@@ -12,7 +12,7 @@
               {%- for link in section.settings.menu.links -%}
                 {%- if link.links == blank -%}
               <li class="header1__collection-link">
-                <a href="{{ link.url }}">{{ link.title | escape }}</a>
+                <a class="nav-style" href="{{ link.url }}">{{ link.title | escape }}</a>
               </li>
                 {%- else -%}
 
@@ -20,7 +20,9 @@
                     <a href="{{ link.url }}">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
                     <ul class="collection-link__sub-links">
                       {%- for childlink in link.links -%}
-                        <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
+                        <li>
+                          <a class="nav-style" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+                        </li>
                       {%- endfor -%}
                     </ul>
                   </li>
@@ -57,14 +59,14 @@
               {%- for link in section.settings.menu_two.links -%}
                 {%- if link.links == blank -%}
               <li class="header1__collection-link" style="padding-right: 40px;">
-                <a href="{{ link.url }}">{{ link.title | escape }}</a>
+                <a href="{{ link.url }}" class="nav-style">{{ link.title | escape }}</a>
               </li>
                 {%- else -%}
                   <li class="header1__collection-link">
                     <a href="{{ link.url }}">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
                     <ul class="collection-link__sub-links">
                       {%- for childlink in link.links -%}
-                        <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
+                        <li><a href="{{ childlink.url }}" class="nav-style">{{ childlink.title | escape }}</a></li>
                       {%- endfor -%}
                     </ul>
                   </li>
@@ -72,12 +74,15 @@
               {%- endfor -%}
             {% endif %}
             <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
+            <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+              <i class="fas fa-user"></i>
+            </a>
             
-             {%- if shop.customer_accounts_enabled -%}
+             {% comment %} {%- if shop.customer_accounts_enabled -%}
               <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
                 <i class="fas fa-user"></i>
               </a>
-            {%- endif -%} 
+            {%- endif -%}  {% endcomment %}
             
           </ul>
         </div>

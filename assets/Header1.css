@@ -17,6 +17,11 @@
     padding-left: 0!important;
 }
 
+.nav-style{
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    font-weight: 700 !important;
+}
 
 
 .header1--color{
@@ -103,11 +108,11 @@
     align-items: center
 }
 
-/* #cart-icon{
-    line-height: 100;
-} */
+#cart-icon{
+    padding-right: 10px;
+}
 #cart-icon, #menu-icon{
-    font-size: 1.0rem;
+    font-size: 1.1rem;
 }
 #menu-icon{
     display: none;

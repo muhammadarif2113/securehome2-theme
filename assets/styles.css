@@ -7812,3 +7812,9 @@ a:hover {
     font-family: "Poppins";
     src: url("pxiByp8kv8JHgFVrLDz8Z11lFc-K.woff2") format("woff2");
 }
+
+@font-face {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    src: url("i7dMIFZifjKcF5UAWdDRaPpZUFWaHg.woff2") format("woff2");
+}
