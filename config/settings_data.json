@@ -20,7 +20,7 @@
             "settings": {
               "text": "Welcome to our store",
               "background_color": "#605e7d",
-              "announcement_text_color": "#FFFFFF",
+              "announcement_text_color": "#ffffff",
               "link": ""
             }
           }
@@ -39,7 +39,7 @@
           "background": "#535353",
           "logo_width": 100,
           "menu": "main-menu",
-          "menu_two": "",
+          "menu_two": "main-menu",
           "margin_bottom": 0
         }
       },
