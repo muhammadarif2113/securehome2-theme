@@ -3,148 +3,197 @@
   {% when 'header1' %}
     {{ 'Header1.css' | asset_url | stylesheet_tag }}
     <header class="header header1"> 
-      <i class="fas fa-bars" id="menu-icon"></i>
-      <ul class="header1__collections-nav">
-        {%- if section.settings.menu != blank -%}
-          {%- for link in section.settings.menu.links -%}
-            {%- if link.links == blank -%}
-          <li class="header1__collection-link">
-            <a href="{{ link.url }}">{{ link.title | escape }}</a>
-          </li>
-            {%- else -%}
-
+      <div class="container">
+        <div class="row mx-auto">
+          <i class="fas fa-bars" id="menu-icon"></i>
+        <div class="col-4 col-md-4 d-flex align-items-center justify-content-start">
+          <ul class="header1__collections-nav">
+            {%- if section.settings.menu != blank -%}
+              {%- for link in section.settings.menu.links -%}
+                {%- if link.links == blank -%}
               <li class="header1__collection-link">
-                <a href="{{ link.url }}">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
-                <ul class="collection-link__sub-links">
-                  {%- for childlink in link.links -%}
-                    <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
-                  {%- endfor -%}
-                </ul>
+                <a href="{{ link.url }}">{{ link.title | escape }}</a>
               </li>
-            {%- endif -%}
-          {%- endfor -%}
-        {% endif %}
-      </ul>
-    
-      
-      <div class="header1__logo">
-        <a href="{{ routes.root_url }}">
-          {%- if section.settings.logo != blank -%}
-            {%- assign image_size = section.settings.logo_width | append: 'x' -%}
-            <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
-              src="{{ section.settings.logo | img_url: image_size }}"
-              loading="lazy"
-              class="header__heading-logo"
-              width="{{ section.settings.logo.width }}"
-              height="{{ section.settings.logo.height }}"
-              alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
-            >
-          {%- else -%}
-            {{ shop.name }}
-          {%- endif -%}
-        </a>
-      </div>
+                {%- else -%}
 
-      <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon-mobile"></i></a>
-
-      
-      <ul class="header1__collections-nav">
-        {%- if section.settings.menu_two != blank -%}
-          {%- for link in section.settings.menu_two.links -%}
-            {%- if link.links == blank -%}
-          <li class="header1__collection-link">
-            <a href="{{ link.url }}">{{ link.title | escape }}</a>
-          </li>
-            {%- else -%}
-              {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
-
-              <li class="header1__collection-link">
-                <a href="{{ link.url }}">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
-                <ul class="collection-link__sub-links">
-                  {%- for childlink in link.links -%}
-                    <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
-                  {%- endfor -%}
-                </ul>
-              </li>
-            {%- endif -%}
-          {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
-          {%- endfor -%}
-        {% endif %}
-        <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
+                  <li class="header1__collection-link">
+                    <a href="{{ link.url }}">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
+                    <ul class="collection-link__sub-links">
+                      {%- for childlink in link.links -%}
+                        <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
+                      {%- endfor -%}
+                    </ul>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            {% endif %}
+          </ul>
+        </div>
         
-        {%- if shop.customer_accounts_enabled -%}
-          <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
-            <i class="fas fa-user"></i>
-          </a>
-        {%- endif -%}
-        
-      </ul>
-
-      {% comment %} <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a> {% endcomment %}
-
-      {% comment %} <div class="cart-ctn"> 
-        <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
-      </div> {% endcomment %}
-
-      <nav class="mobile-nav">
-        <ul class="header1__collections-nav-mobile">
-          {%- if section.settings.menu != blank -%}
-            {%- for link in section.settings.menu.links -%}
-              {%- if link.links == blank -%}
-            <li class="header1__collection-link">
-              <hr>
-              <a href="{{ link.url }}">{{ link.title | escape }}</a>
-            </li>
-              {%- else -%}  
-                <li class="header1__collection-link">
-                  <hr>
-                  <a href="{{ link.url }}">{{ link.title | escape }}</a>
-                  <i class="fas fa-long-arrow-alt-right"></i>
-                  <div class="collection-link__sub-links-mobile">
-                    {%- for childlink in link.links -%}
-                      <span><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></span>
-                    {%- endfor -%}
-                  </div>
-                </li>
-              {%- endif -%}
-            {%- endfor -%}
-          {% endif %}
-        </ul>
-
-        <ul class="header1__collections-nav-mobile">
-          {%- if section.settings.menu_two != blank -%}
-            {%- for link in section.settings.menu_two.links -%}
-              {%- if link.links == blank -%}
-            <li class="header1__collection-link">
-              <hr>
-              <a href="{{ link.url }}">{{ link.title | escape }}</a>
-            </li>
+        <div class="col-4 col-md-4 d-flex align-items-center justify-content-start">
+          <div class="header1__logo">
+            <a href="{{ routes.root_url }}">
+              {%- if section.settings.logo != blank -%}
+                {%- assign image_size = section.settings.logo_width | append: 'x' -%}
+                <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+                  src="{{ section.settings.logo | img_url: image_size }}"
+                  loading="lazy"
+                  class="header__heading-logo"
+                  width="{{ section.settings.logo.width }}"
+                  height="{{ section.settings.logo.height }}"
+                  alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+                >
               {%- else -%}
-                {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
-  
+                {{ shop.name }}
+              {%- endif -%}
+            </a>
+          </div>
+        </div>
+
+        <div class="col-4 col-md-4 d-flex align-items-center justify-content-start">
+          <ul class="header1__collections-nav">
+            {%- if section.settings.menu_two != blank -%}
+              {%- for link in section.settings.menu_two.links -%}
+                {%- if link.links == blank -%}
+              <li class="header1__collection-link">
+                <a href="{{ link.url }}">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
+              </li>
+                {%- else -%}
+
+                  <li class="header1__collection-link">
+                    <a href="{{ link.url }}">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
+                    <ul class="collection-link__sub-links">
+                      {%- for childlink in link.links -%}
+                        <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
+                      {%- endfor -%}
+                    </ul>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            {% endif %}
+            <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
+            {%- if shop.customer_accounts_enabled -%}
+              <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+                <i class="fas fa-user"></i>
+              </a>
+            {%- endif -%}
+          </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          {% comment %} <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon-mobile"></i></a> {% endcomment %}
+
+          
+          {% comment %} <ul class="header1__collections-nav">
+            {%- if section.settings.menu_two != blank -%}
+              {%- for link in section.settings.menu_two.links -%}
+                {%- if link.links == blank -%}
+              <li class="header1__collection-link">
+                <a href="{{ link.url }}">{{ link.title | escape }}</a>
+              </li>
+                {%- else -%}
+                  <li class="header1__collection-link">
+                    <a href="{{ link.url }}">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
+                    <ul class="collection-link__sub-links">
+                      {%- for childlink in link.links -%}
+                        <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
+                      {%- endfor -%}
+                    </ul>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            {% endif %}
+            <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
+            
+            {%- if shop.customer_accounts_enabled -%}
+              <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+                <i class="fas fa-user"></i>
+              </a>
+            {%- endif -%}
+            
+          </ul> {% endcomment %}
+
+          {% comment %} <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a> {% endcomment %}
+
+          {% comment %} <div class="cart-ctn"> 
+            <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
+          </div> {% endcomment %}
+
+          <nav class="mobile-nav">
+            <ul class="header1__collections-nav-mobile">
+              {%- if section.settings.menu != blank -%}
+                {%- for link in section.settings.menu.links -%}
+                  {%- if link.links == blank -%}
                 <li class="header1__collection-link">
                   <hr>
                   <a href="{{ link.url }}">{{ link.title | escape }}</a>
-                  <i class="fas fa-long-arrow-alt-right"></i>
-                  <div class="collection-link__sub-links-mobile">
-                    {%- for childlink in link.links -%}
-                      <span><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></span>
-                    {%- endfor -%}
-                  </div>
                 </li>
+                  {%- else -%}  
+                    <li class="header1__collection-link">
+                      <hr>
+                      <a href="{{ link.url }}">{{ link.title | escape }}</a>
+                      <i class="fas fa-long-arrow-alt-right"></i>
+                      <div class="collection-link__sub-links-mobile">
+                        {%- for childlink in link.links -%}
+                          <span><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></span>
+                        {%- endfor -%}
+                      </div>
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              {% endif %}
+            </ul>
+
+            <ul class="header1__collections-nav-mobile">
+              {%- if section.settings.menu_two != blank -%}
+                {%- for link in section.settings.menu_two.links -%}
+                  {%- if link.links == blank -%}
+                <li class="header1__collection-link">
+                  <hr>
+                  <a href="{{ link.url }}">{{ link.title | escape }}</a>
+                </li>
+                  {%- else -%}
+                    {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
+      
+                    <li class="header1__collection-link">
+                      <hr>
+                      <a href="{{ link.url }}">{{ link.title | escape }}</a>
+                      <i class="fas fa-long-arrow-alt-right"></i>
+                      <div class="collection-link__sub-links-mobile">
+                        {%- for childlink in link.links -%}
+                          <span><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></span>
+                        {%- endfor -%}
+                      </div>
+                    </li>
+                  {%- endif -%}
+                {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
+                {%- endfor -%}
+              {% endif %}
+              
+              {%- if shop.customer_accounts_enabled -%}
+                <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+                  <i class="fas fa-user"></i>
+                </a>
               {%- endif -%}
-            {% comment %} <li class="header1__collection-link"><a href="/link">Link</a></li> {% endcomment %}
-            {%- endfor -%}
-          {% endif %}
-          
-          {%- if shop.customer_accounts_enabled -%}
-            <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
-              <i class="fas fa-user"></i>
-            </a>
-          {%- endif -%}
-          
-        </ul>
-      </nav>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
 
   {% when 'header2' %}
