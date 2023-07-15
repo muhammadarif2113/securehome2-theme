@@ -14,6 +14,7 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
+    padding-left: 0!important;
 }
 
 
@@ -41,7 +42,7 @@
     /* color: #000000;  */
     color: var(--header-fontColor); 
     text-decoration: none;
-    padding-right: 50px;
+    padding-right: 40px;
     display: inline-block; 
 }
 
