@@ -5,8 +5,8 @@
     <header class="header header1"> 
       <div class="container">
         <div class="row mx-auto">
+        <div id="first-nav" class="col-4 col-md-4 d-flex align-items-center justify-content-start">
           <i class="fas fa-bars" id="menu-icon"></i>
-        <div class="col-4 col-md-4 d-flex align-items-center justify-content-start">
           <ul class="header1__collections-nav">
             {%- if section.settings.menu != blank -%}
               {%- for link in section.settings.menu.links -%}
@@ -17,7 +17,7 @@
                 {%- else -%}
 
                   <li class="header1__collection-link">
-                    <a href="{{ link.url }}">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
+                    <a href="{{ link.url }}" class="nav-style">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
                     <ul class="collection-link__sub-links">
                       {%- for childlink in link.links -%}
                         <li>
@@ -32,7 +32,7 @@
           </ul>
         </div>
         
-        <div class="col-4 col-md-4 d-flex align-items-center justify-content-start">
+        <div id="middle-nav" class="col-4 col-md-4 d-flex align-items-center justify-content-start">
           <div class="header1__logo">
             <a href="{{ routes.root_url }}">
               {%- if section.settings.logo != blank -%}
@@ -52,8 +52,9 @@
           </div>
         </div>
 
-        <div id="last-nav" class="col-4 col-md-4 d-flex align-items-center justify-content-start">
-          <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon-mobile"></i></a>
+
+        <div id="last-nav" class="col-4 col-md-4 d-flex align-items-center justify-content-start" style="white-space: nowrap;">
+          {% comment %} <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon-mobile"></i></a> {% endcomment %}
           <ul class="header__collections-nav" style="margin: 0;">
             {%- if section.settings.menu_two != blank -%}
               {%- for link in section.settings.menu_two.links -%}
@@ -73,10 +74,10 @@
                 {%- endif -%}
               {%- endfor -%}
             {% endif %}
-            <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
+               {% comment %} <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
             <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
-              <i class="fas fa-user"></i>
-            </a>
+              <i class="fas fa-user" id="user-icon"></i>
+            </a>    {% endcomment %}
             
              {% comment %} {%- if shop.customer_accounts_enabled -%}
               <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
@@ -85,7 +86,12 @@
             {%- endif -%}  {% endcomment %}
             
           </ul>
+             <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
+            <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+              <i class="fas fa-user" id="user-icon"></i>
+            </a>   
         </div>
+
 
 
 

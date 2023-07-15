@@ -8,3 +8,9 @@
     color: #fff;
     font-weight: 700
 }
+
+@media(max-width: 560px){
+    .announce-bar {
+        font-size: 3vw !important;
+    }
+}
