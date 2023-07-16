@@ -6,21 +6,21 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "Luxury Watches",
+            "title": "BlackDogFit",
             "title_size": "lg"
           }
         },
         "paragraph": {
           "type": "paragraph",
           "settings": {
-            "paragraph": "A watch is more than just a tool. A watch is a signal for who you are: your tastes, your interests, your style. When sending such an important message, make sure it is the right message. Whether new or  pre-owned, our catalog of luxury watches will create the perfect first impression, every time.",
+            "paragraph": "Why settle for ordinary when you can embrace extraordinary? Welcome to the world of BlackDog Fit. Unleash Your Inner Athlete in Style!",
             "pa_alignment": "center"
           }
         },
         "button": {
           "type": "button",
           "settings": {
-            "button_label": "See Our Watches",
+            "button_label": "SHOP APPAREL",
             "button_link": "shopify:\/\/collections"
           }
         }
@@ -33,8 +33,8 @@
       "settings": {
         "hero_height": "100vh",
         "image": "shopify:\/\/shop_images\/pexels-ketut-subiyanto-4853257_2.jpg",
-        "background": "#000000",
-        "opacity": 19,
+        "background": "#d7fdff",
+        "opacity": 7,
         "info_alignment": "right",
         "desktop_image_width": "small",
         "desktop_content_position": "top",
@@ -45,32 +45,36 @@
         "padding_bottom": 36
       }
     },
+    "16469417848f17b8a9": {
+      "type": "hero-parallax",
+      "settings": {
+        "parallax-height": "MD",
+        "img_product": "shopify:\/\/shop_images\/pexels-ketut-subiyanto-4719942_1.jpg",
+        "opacity": 2,
+        "txt_button": "SHOP NEW ARRIVALS",
+        "featured_product_handle": "rolex-day-date-ii",
+        "product_alignment": "center",
+        "product_text_color": "#ffffff"
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Find the Perfect Piece of Wristwear...",
-            "heading_size": "h1"
-          }
-        },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>For those seeking refined timepieces, LuxaryWatches is a center of excellence. We have provided high-quality luxury watches for over a century. Today, you can take your pick from world-leading designer names including Rolex, Cartier, and Hublot.<\/p>"
+            "text": "<p>Are you looking for stylish, high-quality fitness apparel that enhances your performance while making you look and feel great? Look no further than BlackDog Fit Apparel, the leading name in fitness wear designed to support your active lifestyle.<\/p>"
           }
         }
       },
       "block_order": [
-        "heading",
         "text"
       ],
       "settings": {
         "color_scheme": "accent-1",
         "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 36
+        "padding_top": 100,
+        "padding_bottom": 0
       }
     },
     "164689973425cec3df": {
@@ -79,25 +83,25 @@
         "16468997347dd14ddb-0": {
           "type": "heading",
           "settings": {
-            "title": "Rolex Oyster Perpetual",
-            "title_size": "sm",
-            "title_alignment": "center"
+            "title": "LEGACY SHORTS",
+            "title_size": "md",
+            "title_alignment": "left"
           }
         },
         "16468997347dd14ddb-1": {
           "type": "paragraph",
           "settings": {
-            "paragraph": "Rolex presents the new generation of its Oyster Perpetual watches and brings a new model to the range, the Oyster Perpetual 41. The light reflections on the case sides highlight the elegant profile of the Oyster case, which is made from Oystersteel. Measuring 41 mm or 36 mm respectively, it is fitted with a domed bezel.",
-            "paragraph_font_size": 1,
-            "pa_alignment": "center"
+            "paragraph": "There’s no room for distractions when you’re repping out. That’s why 315 is designed to fade seamlessly into the background, so you can tune out the world and focus on the lift. Bar’s loaded, you ready?",
+            "paragraph_font_size": 1.4,
+            "pa_alignment": "left"
           }
         },
         "16468997347dd14ddb-2": {
           "type": "button",
           "settings": {
-            "center_button": true,
-            "button_label": "Add to Cart",
-            "button_link": "shopify:\/\/products\/rolex-sea-dweller"
+            "center_button": false,
+            "button_label": "Available Now",
+            "button_link": "shopify:\/\/collections"
           }
         }
       },
@@ -107,31 +111,21 @@
         "16468997347dd14ddb-2"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/shortspromo.jpg",
         "background": "#000000",
-        "info_margin_left": 2,
-        "info_width": 46,
-        "margin_top": 15,
+        "info_margin_left": 0,
+        "info_width": 42,
+        "margin_top": 11,
         "mobile_margin_left": 2,
         "mobile_margin_top": 4,
         "mobile_info_width": 100
       }
     },
-    "16469417848f17b8a9": {
-      "type": "hero-parallax",
-      "settings": {
-        "parallax-height": "MD",
-        "opacity": 2,
-        "txt_button": "",
-        "featured_product_handle": "rolex-day-date-ii",
-        "product_alignment": "left",
-        "product_text_color": "#ffffff"
-      }
-    },
     "1646898224b88b8e74": {
       "type": "collection-products-2",
       "settings": {
-        "collection": "rolex",
-        "total_products": 8,
+        "collection": "new-arrivals-women",
+        "total_products": 3,
         "container_shape": "rectangle",
         "image_fit": "contain",
         "background": "#000000",
@@ -139,122 +133,54 @@
         "show_title": true,
         "show_price": true,
         "xxl_col": "col-xxl-4",
-        "xl_col": "col-xl-3",
-        "lg_col": "col-lg-3",
-        "md_col": "col-md-3",
+        "xl_col": "col-xl-4",
+        "lg_col": "col-lg-4",
+        "md_col": "col-md-4",
         "sm_col": "col-sm-6"
       }
     },
     "hero_two": {
       "type": "hero-two",
       "settings": {
-        "hero_height": "50vh",
+        "hero_height": "75vh",
+        "image1": "shopify:\/\/shop_images\/hard-bike-workout.jpg",
         "background1": "rgba(0,0,0,0)",
-        "opacity1": 7,
-        "button_label1": "Shop Hublot",
+        "opacity1": 6,
+        "button_label1": "Shop Men",
         "button_link1": "shopify:\/\/collections\/hublot",
+        "image2": "shopify:\/\/shop_images\/woman-working-out.jpg",
         "background2": "rgba(0,0,0,0)",
-        "opacity2": 10,
-        "button_label2": "Shop Cartier",
+        "opacity2": 6,
+        "button_label2": "Shop Women",
         "button_link2": "shopify:\/\/collections\/cartier-1"
-      }
-    },
-    "164693872605b4c8fa": {
-      "type": "collection-products-2",
-      "settings": {
-        "collection": "hublot",
-        "total_products": 3,
-        "container_shape": "rectangle",
-        "image_fit": "contain",
-        "background": "#000000",
-        "opacity": 100,
-        "show_title": true,
-        "show_price": true,
-        "xxl_col": "col-xxl-4",
-        "xl_col": "col-xl-4",
-        "lg_col": "col-lg-4",
-        "md_col": "col-md-3",
-        "sm_col": "col-sm-6"
       }
     },
     "collection_products_1": {
       "type": "collection-products-1",
       "settings": {
-        "collection": "cartier-1",
-        "total_products": 3,
+        "collection": "men-arrival-tanks",
+        "total_products": 4,
         "container_shape": "rectangle",
-        "image_fit": "contain",
+        "image_fit": "cover",
         "background": "#000000",
         "opacity": 100,
-        "show_title": false,
-        "show_price": false,
-        "xxl_col": "col-xxl-4",
-        "xl_col": "col-xl-4",
-        "lg_col": "col-lg-4",
+        "show_title": true,
+        "show_price": true,
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-3",
         "md_col": "col-md-6",
         "sm_col": "col-sm-6"
-      }
-    },
-    "1646942879fc74ba60": {
-      "type": "collapsible-content",
-      "blocks": {
-        "164694287905c13eb2-0": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What you get",
-            "icon": "box",
-            "row_content": "<p>Along with your new watch, you will receive a certificate of authenticity, full warranty, and box. <\/p>",
-            "page": ""
-          }
-        },
-        "164694287905c13eb2-1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "When will you get it",
-            "icon": "plane",
-            "row_content": "<p>It will take 3-5 business days to process your order and 5-10 business days to have your order securely delivered. <\/p>",
-            "page": ""
-          }
-        },
-        "164694287905c13eb2-2": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What our customers say about us",
-            "icon": "heart",
-            "row_content": "<p>\"Top notch company, very easy to mail item and receive check in the mail. Very professional and reliable service.\" - <strong>Leah Kurcsics<\/strong><\/p><p>\"Condition of my watch was exactly as described in the listing. All my expectations were definitively met. Definitely a reputable merchant to conduct business with. Your website provides succinct details and pristine pictures of each watch.\" -<strong>Nick W<\/strong><\/p><p>\"Excellent service, product and shipping time. My new go to for anything I need watch-wise. Thank you C&C. I'm in love with my Rolex.\" -<strong>George Betas<\/strong><\/p><p><\/p><p><\/p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "164694287905c13eb2-0",
-        "164694287905c13eb2-1",
-        "164694287905c13eb2-2"
-      ],
-      "settings": {
-        "caption": "",
-        "heading": "Common Questions",
-        "heading_alignment": "center",
-        "layout": "section",
-        "color_scheme": "accent-1",
-        "container_color_scheme": "accent-1",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
   "order": [
     "hero_one",
+    "16469417848f17b8a9",
     "rich_text",
     "164689973425cec3df",
-    "16469417848f17b8a9",
     "1646898224b88b8e74",
     "hero_two",
-    "164693872605b4c8fa",
-    "collection_products_1",
-    "1646942879fc74ba60"
+    "collection_products_1"
   ]
 }
