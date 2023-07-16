@@ -19,7 +19,7 @@
             "type": "announcement",
             "settings": {
               "text": "fast and free shipping on all orders",
-              "background_color": "#000000",
+              "background_color": "#1a1b18",
               "announcement_text_color": "#ffffff",
               "link": ""
             }
@@ -37,6 +37,7 @@
           "header_type": "header1",
           "color_scheme": "background-1",
           "background": "#535353",
+          "logo": "shopify:\/\/shop_images\/Untitled_design.png",
           "logo_width": 100,
           "menu": "category",
           "menu_two": "trending",
