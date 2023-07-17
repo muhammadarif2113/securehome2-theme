@@ -40,13 +40,17 @@
       font-size: 6rem;
   }
 
+  .highlight-img:hover, .highlight-img2:hover {
+    border: 2px solid #FFF; 
+  }
+
 
   
 
   @media (min-width: 767px) { 
     .desktop-width{
       width: {{ section.settings.info_width }}%; 
-      margin-right: {{ section.settings.info_margin_left }}%; 
+      margin-left: {{ section.settings.info_margin_left }}%; 
       margin-top: {{ section.settings.margin_top }}%
 
     }
@@ -64,6 +68,16 @@
     }
     .col-md-6 img{
       padding-top: 50px; 
+    }
+    .product-highlight__title{
+      font-size: 2.5rem; 
+    }
+    .highlight-img, .highlight-img2{
+      width: 170px !important; 
+      height: auto !important; 
+    }
+    .product-highlight__paragraph{
+      font-size: 1.2rem !important; 
     }
 
   }
@@ -173,6 +187,30 @@
 <div class="product-highlight" style="background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(181,234,244,1) 35%, rgba(230,251,255,1) 100%);">
   <div class="container">
     <div class="row">
+      <div class="col-md-6">
+        {%- if section.settings.image != blank -%}
+          <img
+              srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+              {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+              {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+              {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+              {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
+              {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '2000x' }} 2000w,{%- endif -%}
+              {{ section.settings.image | img_url: 'master' }} {{ section.settings.image.width }}w"
+              src="{{ section.settings.image | img_url: '1500x' }}"
+              sizes="(min-width: {{ settings.page_width }}px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+              alt="{{ section.settings.image.alt | escape }}"
+              loading="lazy"
+              width="{{ section.settings.image.width }}"
+              height="{{ section.settings.image.height }}"
+              class="product-highlight__img"
+              style="border: 2px solid #FFF; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; padding-top: 0; margin-top: 50px;"
+          >
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+    </div>
+
       <div class="col-md-4 desktop-width mobile-width">
         <div class="product-highlight__info-container">
   
@@ -190,7 +228,9 @@
                 </p>
               {%- when 'button' -%}
                 {%- if block.settings.button_label != blank -%}
+                  <legend class="form__label" style="color: #0c4e58; font-size: 1rem; font-family: 'Poppins'; font-weight: 700; padding-top: 10px;">COLOR</legend>
                   <img 
+                    class="highlight-img"
                     src="{{ section.settings.image2 | img_url: '1500x' }}"
                     width="{{ section.settings.image2.width }}"
                     height="{{ section.settings.image2.height }}"
@@ -198,14 +238,15 @@
                     style="width: 200px; height:140px;"
                   >
                     <img 
+                      class="highlight-img2"
                       src="{{ section.settings.image3 | img_url: '1500x' }}"
                       width="{{ section.settings.image3.width }}"
                       height="{{ section.settings.image3.height }}"
                       loading="lazy"
                       style="width: 200px; height:140px;"
                     >
-                    <fieldset class="js product-form__input">
-                      <legend class="form__label" style="color: #000000;">Size</legend><input type="radio" id="template--16776583250150__main-1-0" name="Size" value="S" form="product-form-template--16776583250150__main" checked="">
+                    <fieldset class="js product-form__input" style="padding-bottom: 15px;">
+                      <legend class="form__label" style="color: #0c4e58; font-size: 1rem; font-family: 'Poppins'; font-weight: 700; padding-top: 15px;">SIZE</legend><input type="radio" id="template--16776583250150__main-1-0" name="Size" value="S" form="product-form-template--16776583250150__main" checked="">
                         <label for="template--16776583250150__main-1-0" style="margin: 0px 10px; color: #000000;">
                           S
                         </label><input type="radio" id="template--16776583250150__main-1-1" name="Size" value="M" form="product-form-template--16776583250150__main">
@@ -230,29 +271,6 @@
           {%- endfor -%}
         </div>
       </div>
-      <div class="col-md-6">
-        {%- if section.settings.image != blank -%}
-          <img
-              srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
-              {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
-              {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | img_url: '535x' }} 535w,{%- endif -%}
-              {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | img_url: '750x' }} 750w,{%- endif -%}
-              {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
-              {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '2000x' }} 2000w,{%- endif -%}
-              {{ section.settings.image | img_url: 'master' }} {{ section.settings.image.width }}w"
-              src="{{ section.settings.image | img_url: '1500x' }}"
-              sizes="(min-width: {{ settings.page_width }}px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-              alt="{{ section.settings.image.alt | escape }}"
-              loading="lazy"
-              width="{{ section.settings.image.width }}"
-              height="{{ section.settings.image.height }}"
-              class="product-highlight__img"
-              style="border: 2px solid #FFF; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;"
-          >
-          {%- else -%}
-            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-          {%- endif -%}
-    </div>
     
   </div>
 </div>
@@ -299,6 +317,21 @@
       }
     }
   }).mount('.product-highlight')
+
+  const img1 = document.querySelector('.highlight-img'); 
+  const img2 = document.querySelector('.highlight-img2'); 
+
+  img1.addEventListener("click", myFunction);
+  img2.addEventListener("click", myFunction2);
+
+  function myFunction() {
+    img1.style.border = "2px solid #FFF"
+    img2.style.border = "none"
+  }
+  function myFunction2() {
+    img2.style.border = "2px solid #FFF"
+    img1.style.border = "none"
+  }
 </script>
 
 
