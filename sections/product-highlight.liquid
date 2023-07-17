@@ -190,18 +190,41 @@
                 </p>
               {%- when 'button' -%}
                 {%- if block.settings.button_label != blank -%}
-                  <button @click="addToCart" class="product-highlight__button" style="{%- if block.settings.center_button == true -%} display: block; margin: 0 auto; {%- endif -%}">
-                    {% assign button_title = block.settings.button_label | escape %}
-                    {% assign product_url = block.settings.button_link %}
-                     ${ button_title } 
-                  </button>          
-                        
                   <img 
                     src="{{ section.settings.image2 | img_url: '1500x' }}"
                     width="{{ section.settings.image2.width }}"
                     height="{{ section.settings.image2.height }}"
                     loading="lazy"
+                    style="width: 200px; height:140px;"
                   >
+                    <img 
+                      src="{{ section.settings.image3 | img_url: '1500x' }}"
+                      width="{{ section.settings.image3.width }}"
+                      height="{{ section.settings.image3.height }}"
+                      loading="lazy"
+                      style="width: 200px; height:140px;"
+                    >
+                    <fieldset class="js product-form__input">
+                      <legend class="form__label" style="color: #000000;">Size</legend><input type="radio" id="template--16776583250150__main-1-0" name="Size" value="S" form="product-form-template--16776583250150__main" checked="">
+                        <label for="template--16776583250150__main-1-0" style="margin: 0px 10px; color: #000000;">
+                          S
+                        </label><input type="radio" id="template--16776583250150__main-1-1" name="Size" value="M" form="product-form-template--16776583250150__main">
+                        <label for="template--16776583250150__main-1-1" style="margin: 0px 10px; color: #000000;">
+                          M
+                        </label><input type="radio" id="template--16776583250150__main-1-2" name="Size" value="L" form="product-form-template--16776583250150__main">
+                        <label for="template--16776583250150__main-1-2" style="margin: 0px 10px; color: #000000;">
+                          L
+                        </label><input type="radio" id="template--16776583250150__main-1-3" name="Size" value="XL" form="product-form-template--16776583250150__main">
+                        <label for="template--16776583250150__main-1-3" style="margin: 0px 10px; color: #000000;">
+                          XL
+                        </label>
+                     </fieldset>
+
+                  <button @click="addToCart" class="product-highlight__button" style="{%- if block.settings.center_button == true -%} display: block; margin: 0 auto; {%- endif -%}">
+                    {% assign button_title = block.settings.button_label | escape %}
+                    {% assign product_url = block.settings.button_link %}
+                     ${ button_title } 
+                  </button>          
                 {%- endif -%}
             {%- endcase -%}
           {%- endfor -%}
@@ -294,6 +317,11 @@
       "type": "image_picker",
       "id": "image2",
       "label": "t:sections.image-with-text.settings.image2.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "t:sections.image-with-text.settings.image3.label"
     },
     {
       "type": "color",
