@@ -25,6 +25,7 @@
   width: calc(100% - 8rem / var(--font-body-scale));
 }
 
+
 @media screen and (min-width: 750px) {
   .rich-text__blocks {
     max-width: 50rem;
