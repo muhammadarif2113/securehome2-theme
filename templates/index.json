@@ -100,7 +100,7 @@
           "type": "button",
           "settings": {
             "center_button": false,
-            "button_label": "Available Now",
+            "button_label": "Add to Cart",
             "button_link": "shopify:\/\/collections"
           }
         }
