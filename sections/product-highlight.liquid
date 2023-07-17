@@ -194,7 +194,14 @@
                     {% assign button_title = block.settings.button_label | escape %}
                     {% assign product_url = block.settings.button_link %}
                      ${ button_title } 
-                  </button>
+                  </button>          
+                        
+                  <img 
+                    src="{{ section.settings.image | img_url: '1500x' }}"
+                    width="{{ section.settings.image2.width }}"
+                    height="{{ section.settings.image2.height }}"
+                    loading="lazy"
+                  >
                 {%- endif -%}
             {%- endcase -%}
           {%- endfor -%}
@@ -217,9 +224,7 @@
               width="{{ section.settings.image.width }}"
               height="{{ section.settings.image.height }}"
               class="product-highlight__img"
-              style="border: 2px solid #FFF; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;;
-              
-              "
+              style="border: 2px solid #FFF; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;"
           >
           {%- else -%}
             {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -284,6 +289,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "t:sections.image-with-text.settings.image2.label"
     },
     {
       "type": "color",
