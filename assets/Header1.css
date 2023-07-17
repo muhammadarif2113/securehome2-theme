@@ -10,7 +10,7 @@
 
 }
 
-.container{
+.container-header{
     width: 100%;
     display: block;
     margin-right: auto;
@@ -123,8 +123,12 @@
     display: none;
 }
 
+#first-nav{
+    justify-content: end !important;
+}
+
 @media(max-width: 1398px){
-    .container{
+    .container-header{
         margin: 0 !important;
     }
     .header1{
@@ -142,12 +146,12 @@
 }
 
 @media(max-width: 1025px){
-    .container{
+    .container-header{
         position: relative;
     }
     #last-nav{
         position: absolute;
-        top: 12px;
+        top: 45px;
         right: 40px;
         width: 50px!important;
     }
@@ -227,7 +231,7 @@
     .header1{
         padding: 8px 5px;
     }
-    .container{
+    .container-header{
         padding-right: 70px !important; 
     }
     #first-nav{
@@ -242,7 +246,7 @@
         white-space: nowrap;
     }
     #last-nav{
-        top: 7px;
+        top: 40px;
         margin: 0 auto !important;
     }
 }

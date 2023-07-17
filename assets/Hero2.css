@@ -4,7 +4,7 @@
     /* overflow: hidden; */
     position: relative;
     display: flex;
-    margin-bottom: 50px
+    /* margin-bottom: 50px */
 }
 
 .hero2 .hero2__collection1 {
@@ -23,10 +23,10 @@
     position: relative;
     height: 100%
 }
-@media (max-width: 1070px) { 
+@media (max-width: 700px) { 
     .hero2{
         display: block;
-        margin-bottom: 600px;
+        margin-bottom: 900px;
     }
 }
 .hero2 .hero2__collection2 .hero2__content-container {

@@ -1,5 +1,6 @@
 .collection1 {
-    padding: 50px 0
+    padding: 50px 0; 
+    background: #ffffff!important;
 }
 
 .collection1__product-img {
@@ -53,12 +54,15 @@
 .collection1__product-title {
     font-size: 1.2rem;
     font-weight: 700;
-    display: block
+    display: block; 
+    color: #000;
+
 }
 
 .collection1__product-price {
     font-size: 1rem;
-    font-weight: 400
+    font-weight: 400; 
+    color: #000;
 }
 
 .collection1__colors {

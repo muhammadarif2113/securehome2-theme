@@ -7818,3 +7818,9 @@ a:hover {
     font-weight: 700;
     src: url("i7dMIFZifjKcF5UAWdDRaPpZUFWaHg.woff2") format("woff2");
 }
+
+@font-face {
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 700;
+    src: url("ke80OhoaMkR6-hSn7kbHVoFf7ZfgMPr_nQIpBcgXLrIU.woff2") format("woff2");
+}

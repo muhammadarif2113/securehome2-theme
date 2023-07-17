@@ -3,7 +3,7 @@
     height: 100vh;
     overflow: hidden;
     position: relative;
-    margin-bottom: 50px
+    margin-bottom: 0 !important;
 }
 
 .hero1--aligned-center .hero1__content-container {
@@ -53,24 +53,30 @@
 }
 
 .hero1__title {
-    font-size: 3rem;
+    font-size: 4rem !important;
+    letter-spacing: 5px;
     font-family: "Bebas Neue", cursive;
-    color: #fff
+    /* font-family: 'Playfair Display SC', serif; */
+    font-weight:700;
+    color: #FFFFFF; 
 }
 
 .hero1__paragraph {
-    margin-bottom: 2rem
+    margin-bottom: 2rem; 
 }
 
 .hero1__button {
     padding: 15px 30px;
-    background: #fff;
+    background: #ffffff !important;
     text-align: center;
     width: 200px;
     text-decoration: none;
     cursor: pointer;
     font-weight: 700;
-    font-size: .8rem
+    font-size: 0.9rem!important; 
+    border-radius: 5px;
+    border: 2px solid #00b0cb;
+    color: #00b0cb;
 }
 
 .hero1--25vh {

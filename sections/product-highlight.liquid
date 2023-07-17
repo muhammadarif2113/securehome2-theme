@@ -19,9 +19,12 @@
     color: white;
   }
   .product-highlight__button {
-    background: white; 
+    background: #00b0cb; 
     border: none; 
     padding: 15px 40px; 
+    border: 2px solid #FFFFFF; 
+    color: #FFFFFF; 
+    border-radius: 5px; 
   }
 
   .product-highlight__title--sm{
@@ -55,6 +58,12 @@
       width: {{ section.settings.mobile_info_width }}%; 
       margin-left: {{ section.settings.mobile_margin_left }}%;
       margin-top: {{ section.settings.mobile_margin_top }}%
+    }
+    .product-highlight{
+      padding: 50px 0; 
+    }
+    .col-md-6 img{
+      padding-top: 50px; 
     }
 
   }
@@ -161,9 +170,36 @@
 }
 </style>
 
-<div class="product-highlight" style="background: {{ section.settings.background }};">
+<div class="product-highlight" style="background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(181,234,244,1) 35%, rgba(230,251,255,1) 100%);">
   <div class="container">
     <div class="row">
+      <div class="col-md-4 desktop-width mobile-width">
+        <div class="product-highlight__info-container">
+  
+          {%- for block in section.blocks -%}
+            {% case block.type %}
+              {%- when 'heading' -%}
+                <h3 style="font-family: 'Poppins'; font-size: 1.1rem; letter-spacing: 5px; color: #00b0cb;">POWERLIFTER COLLECTION</h3>
+                <h2 class="product-highlight__title product-highlight__title--{{ block.settings.title_size }}" style="text-align: {{ block.settings.title_alignment }}; color: #000000 !important; font-family: 'Playfair Display SC', serif; font-weight: 700;">
+                  {{ block.settings.title | escape }}
+                </h2>
+  
+              {%- when 'paragraph' -%}
+                <p class="product-highlight__paragraph" style="font-size: {{ block.settings.paragraph_font_size }}rem; text-align: {{ block.settings.pa_alignment }}; color: #000000 !important; font-family: 'Poppins';">
+                   {{ block.settings.paragraph | escape }}
+                </p>
+              {%- when 'button' -%}
+                {%- if block.settings.button_label != blank -%}
+                  <button @click="addToCart" class="product-highlight__button" style="{%- if block.settings.center_button == true -%} display: block; margin: 0 auto; {%- endif -%}">
+                    {% assign button_title = block.settings.button_label | escape %}
+                    {% assign product_url = block.settings.button_link %}
+                     ${ button_title } 
+                  </button>
+                {%- endif -%}
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
       <div class="col-md-6">
         {%- if section.settings.image != blank -%}
           <img
@@ -186,32 +222,7 @@
             {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
     </div>
-    <div class="col-md-4 desktop-width mobile-width">
-      <div class="product-highlight__info-container">
-
-        {%- for block in section.blocks -%}
-          {% case block.type %}
-            {%- when 'heading' -%}
-              <h2 class="product-highlight__title product-highlight__title--{{ block.settings.title_size }}" style="text-align: {{ block.settings.title_alignment }};">
-                {{ block.settings.title | escape }}
-              </h2>
-
-            {%- when 'paragraph' -%}
-              <p class="product-highlight__paragraph" style="font-size: {{ block.settings.paragraph_font_size }}rem; text-align: {{ block.settings.pa_alignment }};">
-                 {{ block.settings.paragraph | escape }}
-              </p>
-            {%- when 'button' -%}
-              {%- if block.settings.button_label != blank -%}
-                <button @click="addToCart" class="product-highlight__button" style="{%- if block.settings.center_button == true -%} display: block; margin: 0 auto; {%- endif -%}">
-                  {% assign button_title = block.settings.button_label | escape %}
-                  {% assign product_url = block.settings.button_link %}
-                   ${ button_title } 
-                </button>
-              {%- endif -%}
-          {%- endcase -%}
-        {%- endfor -%}
-      </div>
-    </div>
+    
   </div>
 </div>
 </div>

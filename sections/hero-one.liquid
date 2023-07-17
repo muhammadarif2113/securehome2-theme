@@ -33,7 +33,7 @@
                     <h1 class="hero1__title hero1__title--{{ block.settings.title_size }}">{{ block.settings.title | escape }}</h1>
 
                   {%- when 'paragraph' -%}
-                    <p class="hero1__paragraph--aligned-{{ block.settings.pa_alignment }}">
+                    <p class="hero1__paragraph--aligned-{{ block.settings.pa_alignment }}" style="font-family: 'Poppins'; font-size: 1.3rem;">
                        {{ block.settings.paragraph | escape }}
                     </p>
                   {%- when 'button' -%}

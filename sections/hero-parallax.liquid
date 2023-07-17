@@ -4,19 +4,26 @@
 
   <div class="featured lazy featured-{{ section.settings.parallax-height }}" style="background: url({% if section.settings.img_product %}{{ section.settings.img_product | img_url: 'master' }}{% else %}https://via.placeholder.com/1200x800{% endif %}) 50% 70%;"> 
      <div class="opacity-mask-{{ section.settings.opacity }} d-flex align-items-center"> 
-        <div class="container margin_60"> 
-           <div class="row  product-aligned-{{ section.settings.product_alignment }}"> 
+        <div class="container1 margin_60" style="display: flex; justify-content: center; align-items: center;"> 
+           <div class="row  product-aligned-{{ section.settings.product_alignment }}" style="width: 100%"> 
               <div class="column-one"  style="color: {{ section.settings.product_text_color }};"> 
                  <h3 style="color: {{ section.settings.product_text_color }};">{{ featured_product.title }}</h3> 
                  <p  style="color: {{ section.settings.product_text_color }};">{{ featured_product.description | truncate: 100 }}</p> 
-                 <div class="feat_text_block"> 
+                 <div class="feat_text_block" style="text-align: center;"> 
+
+                    <h3 style="color: inherit; padding: 10px 0;"> Our Core Values</h3>
+                    <p style="font-size: 1.3rem; padding: 8px 0;">Performance that <span class="text-style">Empowers</span></p>
+                    <p style="font-size: 1.3rem; padding: 8px 0;">Fashion that <span class="text-style">Inspires</span></p>
+                    <p style="font-size: 1.3rem; padding: 8px 0;"><span class="text-style">Innovation</span> at its core</p>
+                    <p style="font-size: 1.3rem; padding: 8px 0;">Fit for <span class="text-style">Every body</span></p> 
+
                     <div class="price_box"> 
                        <span class="new_price" style="color: {{ section.settings.product_text_color }};">{{ featured_product.variants.first.price | money }}</span> 
                        {%- if featured_product.variants.first.compare_at_price > featured_product.variants.first.price -%} 
                        <span class="old_price" style="color: {{ section.settings.product_text_color }};">{{ featured_product.variants.first.compare_at_price | money }}</span> 
                        {%- endif -%} 
                     </div> 
-                    <a class="btn" href="{{ featured_product.url }}" role="button">{{ section.settings.txt_button }}</a> 
+                    <a class="btn" href="{{ featured_product.url }}" role="button" style="color: #FFFFFF!important;">{{ section.settings.txt_button }}</a> 
                  </div> 
               </div> 
            </div> 

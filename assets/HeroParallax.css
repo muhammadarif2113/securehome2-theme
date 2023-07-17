@@ -57,6 +57,12 @@
     justify-content: flex-end;
 }
 
+.text-style{
+  font-weight: bold;
+  font-style: italic;
+  color: #00b0cb; 
+}
+
  .featured h3 { 
 
    color: #fff; 
@@ -262,7 +268,7 @@
 
  } 
 
- .container { 
+ .container1 { 
 
    width: 100%; 
 
@@ -338,7 +344,7 @@
 
    } 
 
-   .container { 
+   .container1 { 
 
      width: 100%; 
 
