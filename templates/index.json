@@ -112,6 +112,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/shortspromo.jpg",
+        "image2": "shopify:\/\/shop_images\/photoshop.png",
         "background": "#000000",
         "info_margin_left": 0,
         "info_width": 42,
