@@ -156,6 +156,10 @@
         width: 50px!important;
     }
 
+    #first-nav{
+        justify-content: start !important;
+    }
+
     .header__collections-nav{
         display: none;
     }
