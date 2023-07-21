@@ -244,6 +244,8 @@
                 </p>
               {%- when 'button' -%}
                 {%- if block.settings.button_label != blank -%}
+                  <legend class="form__label" style="color: #0c4e58; font-size: 1rem; font-family: 'Poppins'; font-weight: 700; padding-top: 10px;">PRICE</legend>
+                  <p style="color: #000000; font-weight: 700; font-size: 1rem;">$58.99</p>
                   <legend class="form__label" style="color: #0c4e58; font-size: 1rem; font-family: 'Poppins'; font-weight: 700; padding-top: 10px;">COLOR</legend>
                   <img 
                     class="highlight-img"
@@ -282,6 +284,9 @@
                     {% assign product_url = block.settings.button_link %}
                      ${ button_title } 
                   </button>          
+
+                  {% comment %} <a href="{{ block.settings.button_label }}" {{ block.shopify_attributes }}> {{ block.settings.button_label | escape }} 
+                  </a> {% endcomment %}
                 {%- endif -%}
             {%- endcase -%}
           {%- endfor -%}
@@ -293,6 +298,9 @@
 </div>
 
 <script>
+  console.log('hello')
+
+  {% comment %} console.log('{{ product.title }}') {% endcomment %}
   const productHighlight = Vue.createApp({
     delimiters: ['${', '}'], 
     created() {
