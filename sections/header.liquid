@@ -74,114 +74,17 @@
                 {%- endif -%}
               {%- endfor -%}
             {% endif %}
-               {% comment %} <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
-            <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
-              <i class="fas fa-user" id="user-icon"></i>
-            </a>    {% endcomment %}
-            
-             {% comment %} {%- if shop.customer_accounts_enabled -%}
-              <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
-                <i class="fas fa-user"></i>
-              </a>
-            {%- endif -%}  {% endcomment %}
-            
           </ul>
-             <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
+             <a href="{{ routes.cart_url }}">
+              <i class="fas fa-shopping-bag" style="font-size: 1.4rem; margin: 3px 10px 0 0;"></i>
+            </a>
+            
             <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
-              <i class="fas fa-user" id="user-icon"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px;" aria-hidden="true" focusable="false" role="presentation" class="icon icon-account" fill="#121212" viewBox="0 0 18 19">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="#121212">
+              </path></svg>
             </a>   
         </div>
-
-
-
-
-
-
-
-
-
-
-          {% comment %} <ul class="header1__collections-nav">
-            {%- if section.settings.menu_two != blank -%}
-              {%- for link in section.settings.menu_two.links -%}
-                {%- if link.links == blank -%}
-              <li class="header1__collection-link">
-                <a href="{{ link.url }}">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
-              </li>
-                {%- else -%}
-
-                  <li class="header1__collection-link">
-                    <a href="{{ link.url }}">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
-                    <ul class="collection-link__sub-links">
-                      {%- for childlink in link.links -%}
-                        <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
-                      {%- endfor -%}
-                    </ul>
-                  </li>
-                {%- endif -%}
-              {%- endfor -%}
-            {% endif %}
-            <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
-            {%- if shop.customer_accounts_enabled -%}
-              <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
-                <i class="fas fa-user"></i>
-              </a>
-            {%- endif -%}
-          </ul>
-        </div> {% endcomment %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          {% comment %} <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon-mobile"></i></a> {% endcomment %}
-
-          
-          {% comment %} <ul class="header1__collections-nav">
-            {%- if section.settings.menu_two != blank -%}
-              {%- for link in section.settings.menu_two.links -%}
-                {%- if link.links == blank -%}
-              <li class="header1__collection-link">
-                <a href="{{ link.url }}">{{ link.title | escape }}</a>
-              </li>
-                {%- else -%}
-                  <li class="header1__collection-link">
-                    <a href="{{ link.url }}">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
-                    <ul class="collection-link__sub-links">
-                      {%- for childlink in link.links -%}
-                        <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
-                      {%- endfor -%}
-                    </ul>
-                  </li>
-                {%- endif -%}
-              {%- endfor -%}
-            {% endif %}
-            <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
-            
-            {%- if shop.customer_accounts_enabled -%}
-              <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
-                <i class="fas fa-user"></i>
-              </a>
-            {%- endif -%}
-            
-          </ul> {% endcomment %}
-
-          {% comment %} <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a> {% endcomment %}
-
-          {% comment %} <div class="cart-ctn"> 
-            <a href="{{ routes.cart_url }}"><i class="fas fa-shopping-cart" id="cart-icon"></i></a>
-          </div> {% endcomment %}
 
           <nav class="mobile-nav">
             <ul class="header1__collections-nav-mobile">

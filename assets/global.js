@@ -1,3 +1,4 @@
+<script>https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js%22%3E%3C</script>
 function getFocusableElements(container) {
   return Array.from(
     container.querySelectorAll(

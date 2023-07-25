@@ -42,14 +42,21 @@
 
 .header1__collections-nav {
     margin-bottom: 0;
+    transition: all 0.5s ease-out;
+
 }
 
 .header1__collections-nav a {
     /* color: #000000;  */
     color: var(--header-fontColor); 
     text-decoration: none;
-    padding-right: 40px;
-    display: inline-block; 
+    margin-right: 40px;
+    display: inline-block;
+    transition: all 0.5s ease-out;
+}
+
+.header1__collections-nav a:hover {
+    border-bottom: 1px solid black; 
 }
 
 .header1__collection-link {
@@ -68,7 +75,7 @@
     position: absolute;
     padding: 20px 0;
     min-width: 150px;
-    top: 20px;
+    top: 50px;
     left: 0
 }
 
@@ -82,7 +89,7 @@
 }
 
 .header1__collection-link .collection-link__sub-links a:hover {
-    color: red
+    color: red; 
 }
 
 .header1__collection-link:hover .collection-link__sub-links {

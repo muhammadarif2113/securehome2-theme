@@ -200,6 +200,9 @@
 }
 </style>
 
+{% assign selectedVariant = product.first_or_selected_variant %}
+
+
 <div class="product-highlight" style="background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(181,234,244,1) 35%, rgba(230,251,255,1) 100%);">
   <div class="container">
     <div class="row">
@@ -249,7 +252,7 @@
                   <legend class="form__label" style="color: #0c4e58; font-size: 1rem; font-family: 'Poppins'; font-weight: 700; padding-top: 10px;">COLOR</legend>
                   <img 
                     class="highlight-img"
-                    src="{{ section.settings.image2 | img_url: '1500x' }}"
+                    src="https://cdn.shopify.com/s/files/1/0639/9200/4838/products/photoshop.png?v=1689920073"
                     width="{{ section.settings.image2.width }}"
                     height="{{ section.settings.image2.height }}"
                     loading="lazy"
@@ -257,12 +260,15 @@
                   >
                     <img 
                       class="highlight-img2"
-                      src="{{ section.settings.image3 | img_url: '1500x' }}"
+                      src="https://cdn.shopify.com/s/files/1/0639/9200/4838/products/photoshop2.png?v=1689920111"
                       width="{{ section.settings.image3.width }}"
                       height="{{ section.settings.image3.height }}"
                       loading="lazy"
                       style="width: 200px; height:140px;"
                     >
+
+
+                  
                     <fieldset class="js product-form__input" style="padding-bottom: 15px;">
                       <legend class="form__label" style="color: #0c4e58; font-size: 1rem; font-family: 'Poppins'; font-weight: 700; padding-top: 15px;">SIZE</legend><input type="radio" id="template--16776583250150__main-1-0" name="Size" value="S" form="product-form-template--16776583250150__main" checked="">
                         <label for="template--16776583250150__main-1-0" style="margin: 0px 10px; color: #000000;">
@@ -277,6 +283,10 @@
                         <label for="template--16776583250150__main-1-3" style="margin: 0px 10px; color: #000000;">
                           XL
                         </label>
+                        <input type="radio" id="template--16776583250150__main-1-3" name="Size" value="XL" form="product-form-template--16776583250150__main">
+                        <label for="template--16776583250150__main-1-2" style="margin: 0px 10px; color: #000000;">
+                          2XL
+                        </label>
                      </fieldset>
 
                   <button @click="addToCart" class="product-highlight__button" style="{%- if block.settings.center_button == true -%} display: block; margin: 0 auto; {%- endif -%}">
@@ -284,12 +294,10 @@
                     {% assign product_url = block.settings.button_link %}
                      ${ button_title } 
                   </button>          
-
-                  {% comment %} <a href="{{ block.settings.button_label }}" {{ block.shopify_attributes }}> {{ block.settings.button_label | escape }} 
-                  </a> {% endcomment %}
                 {%- endif -%}
             {%- endcase -%}
           {%- endfor -%}
+
         </div>
       </div>
     
@@ -297,18 +305,89 @@
 </div>
 </div>
 
+
 <script>
+  const img1 = document.querySelector('.highlight-img'); 
+  const img2 = document.querySelector('.highlight-img2'); 
+  console.log('the src is: '); 
+  console.log(img1.src)
+
+
+  {% comment %} img1.addEventListener("click", myFunction); {% endcomment %}
+  img2.addEventListener("click", myFunction2);
+  document.addEventListener('DOMContentLoaded', function(){
+
+  img1.addEventListener('click', ()=>{
+    img1.style.border = "2px solid #FFF"
+    img2.style.border = "none"
+    if(img1.style.border = "2px solid #FFF"){
+      img1.classList.add("active");
+      console.log('img1 is active')
+    }
+  })
+})
+
+  function myFunction() {
+    img1.style.border = "2px solid #FFF"
+    img2.style.border = "none"
+    if(img1.style.border = "2px solid #FFF"){
+      img1.classList.add("active");
+      console.log('img1 is active')
+    }
+
+  }
+  function myFunction2() {
+    img2.style.border = "2px solid #FFF"
+    img1.style.border = "none"
+    if(img2.style.border = "2px solid #FFF"){
+      img2.classList.add("active");
+      console.log('img2 is active')
+    }
+
+  }
+
+
   console.log('hello')
+//get this img src and see it if equals 
 
   {% comment %} console.log('{{ product.title }}') {% endcomment %}
   const productHighlight = Vue.createApp({
     delimiters: ['${', '}'], 
     created() {
-      fetch('{{product_url}}.js')
+      fetch('{{ product_url }}.js')
       .then(res => res.json())
       .then((data) => {
-        this.product_id = data.variants[0].id
-        console.log(this.product_id)
+        {% comment %} this.product_id = data.variants[0].id {% endcomment %}
+        for (let i = 0; i < data.variants.length; i++) { 
+          this.product_id = data.variants[i].id
+        }
+          {% comment %} this.product_id = data.variants[i].id {% endcomment %}
+          {% comment %} console.log(img1.src) {% endcomment %}
+          {% comment %} console.log('looping')
+           if (img1.src == data.variants[i].featured_image.src){
+            console.log(data.variants[i])
+            
+          } else if (img2.src == data.variants[i].featured_image.src){
+            console.log(data.variants[i])
+
+          }  {% endcomment %}
+
+          {% comment %} console.log(this.product_id) {% endcomment %}
+          {% comment %} console.log(data.variants[i]) {% endcomment %}
+
+        {% comment %} console.log(data.variants[i].option1)
+        console.log(data.variants[i].option2)
+        console.log(data.variants[i].featured_image.src) {% endcomment %}
+        {% comment %} console.log(data.variants[1])
+        console.log(data.variants[1].option1)
+        console.log(data.variants[1].option2)
+        console.log(data.variants[1].featured_image.src) {% endcomment %}
+        {% comment %} } {% endcomment %}
+
+        //if img src and size clicked on is equal to the product id with the same src and size
+
+
+
       })
     }, 
     methods: {
@@ -342,20 +421,7 @@
     }
   }).mount('.product-highlight')
 
-  const img1 = document.querySelector('.highlight-img'); 
-  const img2 = document.querySelector('.highlight-img2'); 
 
-  img1.addEventListener("click", myFunction);
-  img2.addEventListener("click", myFunction2);
-
-  function myFunction() {
-    img1.style.border = "2px solid #FFF"
-    img2.style.border = "none"
-  }
-  function myFunction2() {
-    img2.style.border = "2px solid #FFF"
-    img1.style.border = "none"
-  }
 </script>
 
 
