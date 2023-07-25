@@ -190,8 +190,8 @@ fieldset.product-form__input .form__label {
   color: rgb(var(--color-foreground));
   display: inline-block;
   margin: 0.7rem 0.5rem 0.2rem 0;
-  padding: 1rem 2rem;
-  font-size: 1.4rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
   letter-spacing: 0.1rem;
   line-height: 1;
   text-align: center;
@@ -281,7 +281,7 @@ fieldset.product-form__input .form__label {
 }
 
 .shopify-payment-button__button {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   letter-spacing: 0.1rem;
 }
 
@@ -313,6 +313,11 @@ a.product__text {
 .product__title {
   word-break: break-word;
   margin-bottom: 1.5rem;
+  margin-top: 0.5rem!important; 
+  font-size: 1.8rem!important; 
+  font-family: 'Playfair Display SC', serif!important;
+  background: #F5F5F5; 
+
 }
 
 .product__title + .product__text.caption-with-letter-spacing {
