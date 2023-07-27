@@ -276,8 +276,7 @@
                 </p>
               {%- when 'button' -%}
                 {%- if block.settings.button_label != blank -%}
-                  <legend class="form__label" style="color: #0c4e58; font-size: 1rem; font-family: 'Poppins'; font-weight: 700; padding-top: 10px;">PRICE</legend>
-                  <p style="color: #000000; font-weight: 700; font-size: 1rem;">$58.99</p>
+                  <legend class="form__label" style="color: #0c4e58; font-size: 1rem; font-family: 'Poppins'; font-weight: 700; padding-top: 10px;">Back in stock!</legend>
                   <legend class="form__label" style="color: #0c4e58; font-size: 1rem; font-family: 'Poppins'; font-weight: 700; padding-top: 10px;">COLOR</legend>
                   <img 
                     class="highlight-img"
@@ -295,6 +294,14 @@
                       loading="lazy"
                       style="width: 200px; height:140px;"
                     >
+                      <img 
+                        class="highlight-img3"
+                        src="https://cdn.shopify.com/s/files/1/0639/9200/4838/products/photoshop2.png?v=1689920111"
+                        width="{{ section.settings.image3.width }}"
+                        height="{{ section.settings.image3.height }}"
+                        loading="lazy"
+                        style="width: 200px; height:140px;"
+                      >
 
 
                   
@@ -382,9 +389,6 @@
   }
 
 
-  console.log('hello')
-//get this img src and see it if equals 
-
   {% comment %} console.log('{{ product.title }}') {% endcomment %}
   const productHighlight = Vue.createApp({
     delimiters: ['${', '}'], 
@@ -392,34 +396,18 @@
       fetch('{{ product_url }}.js')
       .then(res => res.json())
       .then((data) => {
-        {% comment %} this.product_id = data.variants[0].id {% endcomment %}
-        for (let i = 0; i < data.variants.length; i++) { 
-          this.product_id = data.variants[i].id
-        }
+        {% comment %} console.log(data.variants[0].option2) {% endcomment %}
+         this.product_id = data.variants[0].id
+        {% comment %} console.log(data.variants[0].id)  {% endcomment %}
+          for (let i = 0; i < data.variants.length; i++) { 
           {% comment %} this.product_id = data.variants[i].id {% endcomment %}
-          {% comment %} console.log(img1.src) {% endcomment %}
-          {% comment %} console.log('looping')
-           if (img1.src == data.variants[i].featured_image.src){
-            console.log(data.variants[i])
-            
-          } else if (img2.src == data.variants[i].featured_image.src){
-            console.log(data.variants[i])
-
-          }  {% endcomment %}
-
-          {% comment %} console.log(this.product_id) {% endcomment %}
-          {% comment %} console.log(data.variants[i]) {% endcomment %}
-
-        {% comment %} console.log(data.variants[i].option1)
-        console.log(data.variants[i].option2)
-        console.log(data.variants[i].featured_image.src) {% endcomment %}
-        {% comment %} console.log(data.variants[1])
-        console.log(data.variants[1].option1)
-        console.log(data.variants[1].option2)
-        console.log(data.variants[1].featured_image.src) {% endcomment %}
-        {% comment %} } {% endcomment %}
-
-        //if img src and size clicked on is equal to the product id with the same src and size
+          {% comment %} console.log(data.variants[i].option1) {% endcomment %}
+          {% comment %} if(data.variants[i].id == this.product_id){
+            console.log('varaint added')
+            console.log(this.product_id)
+            console.log(data.variants[i].id)
+          } {% endcomment %}
+        }  
 
 
 
