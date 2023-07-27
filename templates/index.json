@@ -100,7 +100,7 @@
           "type": "button",
           "settings": {
             "center_button": false,
-            "button_label": "Add to Cart",
+            "button_label": "Check it out",
             "button_link": "shopify:\/\/products\/315-seamless-1-2-shorts"
           }
         }
@@ -133,7 +133,7 @@
         "background": "#ffffff",
         "opacity": 100,
         "show_title": true,
-        "show_price": true,
+        "show_price": false,
         "xxl_col": "col-xxl-4",
         "xl_col": "col-xl-4",
         "lg_col": "col-lg-4",
@@ -167,7 +167,7 @@
         "background": "#ffffff",
         "opacity": 100,
         "show_title": true,
-        "show_price": true,
+        "show_price": false,
         "xxl_col": "col-xxl-3",
         "xl_col": "col-xl-3",
         "lg_col": "col-lg-3",
