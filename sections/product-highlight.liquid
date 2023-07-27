@@ -273,10 +273,10 @@
               {%- when 'paragraph' -%}
                 <p class="product-highlight__paragraph" style="font-size: {{ block.settings.paragraph_font_size }}rem; text-align: {{ block.settings.pa_alignment }}; color: #000000 !important; font-family: 'Poppins';">
                    {{ block.settings.paragraph | escape }}
+                   <legend class="form__label" style="color: #000000; font-size: 1rem; font-family: 'Poppins'; font-weight: 700; padding-top: 10px;">Back in stock!</legend>
                 </p>
               {%- when 'button' -%}
                 {%- if block.settings.button_label != blank -%}
-                  <legend class="form__label" style="color: #0c4e58; font-size: 1rem; font-family: 'Poppins'; font-weight: 700; padding-top: 10px;">Back in stock!</legend>
                   <legend class="form__label" style="color: #0c4e58; font-size: 1rem; font-family: 'Poppins'; font-weight: 700; padding-top: 10px;">COLOR</legend>
                   <img 
                     class="highlight-img"
@@ -294,44 +294,12 @@
                       loading="lazy"
                       style="width: 200px; height:140px;"
                     >
-                      <img 
-                        class="highlight-img3"
-                        src="https://cdn.shopify.com/s/files/1/0639/9200/4838/products/photoshop2.png?v=1689920111"
-                        width="{{ section.settings.image3.width }}"
-                        height="{{ section.settings.image3.height }}"
-                        loading="lazy"
-                        style="width: 200px; height:140px;"
-                      >
 
 
                   
-                    <fieldset class="js product-form__input" style="padding-bottom: 15px;">
-                      <legend class="form__label" style="color: #0c4e58; font-size: 1rem; font-family: 'Poppins'; font-weight: 700; padding-top: 15px;">SIZE</legend>
-                      <input type="radio" id="template--16776583250150__main-1-0" name="Size" value="S" form="product-form-template--16776583250150__main" checked="">
-                        <label for="template--16776583250150__main-1-0" style="margin: 0px 10px; color: #000000;">
-                          S
-                        </label>
-                        
-                        <input type="radio" id="template--16776583250150__main-1-1" name="Size" value="M" form="product-form-template--16776583250150__main">
-                          <label for="template--16776583250150__main-1-1" style="margin: 0px 10px; color: #000000;">
-                            M
-                          </label>
-                        <input type="radio" id="template--16776583250150__main-1-2" name="Size" value="L" form="product-form-template--16776583250150__main">
-                          <label for="template--16776583250150__main-1-2" style="margin: 0px 10px; color: #000000;">
-                            L
-                          </label>
-                        <input type="radio" id="template--16776583250150__main-1-3" name="Size" value="XL" form="product-form-template--16776583250150__main">
-                        <label for="template--16776583250150__main-1-3" style="margin: 0px 10px; color: #000000;">
-                          XL
-                        </label>
-                        <input type="radio" id="template--16776583250150__main-1-3" name="Size" value="XL" form="product-form-template--16776583250150__main">
-                        <label for="template--16776583250150__main-1-2" style="margin: 0px 10px; color: #000000;">
-                          2XL
-                        </label>
-                     </fieldset>
                      
 
-                  <button @click="addToCart" class="product-highlight__button" style="padding: 15px 40px!important; {%- if block.settings.center_button == true -%} display: block; margin: 0 auto;  {%- endif -%}">
+                  <button @click="addToCart" class="product-highlight__button" style="margin-top: 50px; padding: 15px 40px!important; {%- if block.settings.center_button == true -%} display: block; margin: 0 auto;  {%- endif -%}">
                     {% assign button_title = block.settings.button_label | escape %}
                     {% assign product_url = block.settings.button_link %}
                      ${ button_title } 
@@ -387,6 +355,7 @@
     }
 
   }
+  
 
 
   {% comment %} console.log('{{ product.title }}') {% endcomment %}

@@ -37,7 +37,7 @@
 
 
 .header1 a:hover {
-    color: #e63b49
+    color: #00b0cb
 }
 
 .header1__collections-nav {
@@ -55,9 +55,6 @@
     transition: all 0.5s ease-out;
 }
 
-.header1__collections-nav a:hover {
-    border-bottom: 1px solid black; 
-}
 
 .header1__collection-link {
     display: inline-block;
@@ -89,7 +86,7 @@
 }
 
 .header1__collection-link .collection-link__sub-links a:hover {
-    color: red; 
+    color: #00b0cb; 
 }
 
 .header1__collection-link:hover .collection-link__sub-links {

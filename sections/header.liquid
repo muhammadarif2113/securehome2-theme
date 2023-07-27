@@ -19,7 +19,7 @@
                     <a href="{{ link.url }}" class="nav-style">{{ link.title | escape }} <i class="fas fa-chevron-down"></i></a>
                       <ul class="collection-link__sub-links">
                        {%- for childlink in link.links -%}
-                        <li>
+                        <li style="margin-bottom: 10px;">
                           <a class="nav-style" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
                         </li>
                       {%- endfor -%} 

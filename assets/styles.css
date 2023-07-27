@@ -56,7 +56,7 @@ table {
 }
 
 .header1 a:hover {
-    color: #e63b49
+    color: #00b0cb
 }
 
 .header1__collections-nav {
@@ -97,7 +97,7 @@ table {
 }
 
 .header1__collection-link .collection-link__sub-links a:hover {
-    color: red
+    color: #00b0cb; 
 }
 
 .header1__collection-link:hover .collection-link__sub-links {
@@ -130,7 +130,7 @@ table {
 }
 
 .header2 a:hover {
-    color: #e63b49
+    color: #00b0cb
 }
 
 .header2__collections-nav {
@@ -171,7 +171,7 @@ table {
 }
 
 .header2__collection-link .collection-link__sub-links a:hover {
-    color: red
+    color: #00b0cb; 
 }
 
 .header2__collection-link:hover .collection-link__sub-links {
@@ -200,7 +200,7 @@ table {
 }
 
 .header3 a:hover {
-    color: #e63b49
+    color: #00b0cb
 }
 
 .header3__collections-nav {
@@ -242,7 +242,7 @@ table {
 }
 
 .header3__collection-link .collection-link__sub-links a:hover {
-    color: red
+    color: #00b0cb;
 }
 
 .header3__collection-link:hover .collection-link__sub-links {
@@ -3074,7 +3074,7 @@ progress {
 }
 
 .link-danger {
-    color: #dc3545
+    color: #00b0cb
 }
 
 .link-danger:focus, .link-danger:hover {
@@ -7776,7 +7776,7 @@ body {
 }
 
 a:hover {
-    color: #f84c4c
+    color: #00b0cb
 }
 
 .fixed-nav.transparent-nav .header {
